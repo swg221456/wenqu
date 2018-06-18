@@ -1,0 +1,307 @@
+
+body{
+    margin:0px;
+    padding:0px;
+
+}
+
+.topdiv{
+    height: 120px;
+    width: 100%;
+    background-image: url(image/101.jpeg);
+}
+
+.topimg{
+    height: 120px;
+    width: 320px;
+    float: left;
+    
+}
+
+.topbtn{
+
+ 
+}
+
+.seltbtn {
+    width:40%;
+}
+
+
+
+
+
+.booknav img{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.smalltap{
+    background-color: chartreuse;
+}
+
+.textw{
+    width: 220px;
+    float: left;
+}
+.btnsumit{
+    margin-top: 0px;
+    margin-left: 20px;
+    background-color: darkgray;
+    border: 0px;
+
+}
+
+
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
+
+.topslt{
+    margin-left: 100px;
+}
+
+.main{
+    height: 60px;
+    width: 100%;
+    margin-top: -20px;
+    background-color: aqua;
+
+}
+
+.navdiv{
+    width: 100%;
+    height: 50px;
+
+}
+
+.navtext{
+    font-size: 20px;
+}
+.bigtext{
+    font-size: 16px;
+}
+
+.selsce{
+    background-color: aqua;
+    margin-top: 20px;
+}
+
+.btnnav{
+    margin-top: 20px;
+}
+
+.bookclassdiv{
+
+    height: 800px;
+    float: left;
+}
+
+
+.clstext a{
+    text-decoration: none;
+    color: darkgrey;
+}
+
+.clstext a:hover{
+    color: crimson;
+}
+
+.bookclassdiv span{
+    color: darkgrey;
+}
+
+
+.clstext img{
+    width: 40px;
+    height: 40px;
+}
+.clstext{
+    margin-top: 10px;
+}
+
+.clstext span{
+
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.xiah{
+    height: 1px;
+    border: none;
+    border-top:1px solid  #555555;
+}
+
+.title-n{
+    width: 100%;
+    color: brown;
+    font-size: 20px;
+}
+
+.bigdiv{
+    height:100%;
+    float: left;
+}
+
+.bookrank{
+
+    height: 600px;
+    float: left;
+}
+
+.bottomdiv{
+    width: 100%;
+    height: 40px;
+
+
+}
+
+.bottext{
+    
+    text-align: center;
+}
+.bigimg{
+    height: 400px;
+    background-color: khaki;
+}
+
+.bookimg{
+    height: 700px;
+
+}
+
+.booknav{
+    height: 200px;
+    float: left;
+}
+
+.booknav2{
+
+    height: 200px; 
+    float: left;
+    word-break: break-all;
+    word-wrap: break-word; 
+}
+
+.booknavba{
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.booknav2 h3{
+    color: black;
+    margin-top: -160px;
+    margin-left: 250px;
+}
+.booknav2 p{
+    margin-left: 250px;
+    text-indent: 2em;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    
+}
+
+.booknav2 a{
+    text-decoration: none;
+    color: black;
+}
+
+.booknav2 a:hover{
+    color:red;
+}
+
+
+
+
+.bookcs{
+    height: 300px;
+
+}
+
+.rankz{
+
+    height: 280px;
+}
+
+.rankr{
+
+    height: 280px;
+
+}
+.hrcs{
+    margin-top: 0px;
+    height:3px;border:none;border-top:3px double red;
+}
+.csn a{
+    color: #555555;
+    text-decoration: none;
+}
+.csn a:hover{
+    color: red;
+}
+
+.csv a{
+    color: #555555;
+    text-decoration: none;
+}
+
+.csv a:hover{
+    color: red;
+}
+.csr a{
+    color: #555555;
+    text-decoration: none;
+}
+
+.csr a:hover{
+    color: red;
+}
+
+.csrank a{
+    color: #555555;
+    text-decoration: none;
+}
+
+.csrank a:hover{
+    color: red;
+}
+
+.rankz h4{
+    color: darkgray;
+}
+
+
+
+.rankr h4{
+    color:darkgray;
+}
+
+.rankz a{
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+}
+
+.rankr a{
+    text-decoration: none;
+}
+
+.csn{
+    color: #555555;
+}
+
+.bottomdiv p{
+    font-size: 12px;
+    color: darkgray;
+}
