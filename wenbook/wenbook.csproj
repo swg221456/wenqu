@@ -99,6 +99,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="js\filejs.js" />
     <Content Include="js\jquery-1.11.0.min.js" />
+    <Content Include="MyLibrary.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -180,6 +181,13 @@
     </Compile>
     <Compile Include="model\FileUploadInfo.cs" />
     <Compile Include="model\logon.cs" />
+    <Compile Include="MyLibrary.aspx.cs">
+      <DependentUpon>MyLibrary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyLibrary.aspx.designer.cs">
+      <DependentUpon>MyLibrary.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

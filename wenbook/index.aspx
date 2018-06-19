@@ -73,8 +73,8 @@
                             <li class=" hidden-xs"><a href="#">排行榜</a></li>
                             <li><a href="#">分类</a></li>
                             <li class=" hidden-xs" ><a href="#">图书馆</a></li>
-                            <li><a href="#">我的书架</a></li>
-                            <li><a href="#">个人信息</a></li>
+                            <li class=" hidden-xs" ><a href="#">书架</a></li>
+                            <li><a href="#">信息</a></li>
                           </ul>
             
                 

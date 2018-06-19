@@ -45,7 +45,7 @@ namespace wenbook
                     try
                     {
                         this.Image1.ImageUrl = "~/image/" + FileUpload1.FileName;
-                        this.FileUpload1.SaveAs(Server.MapPath("~/image/") + FileUpload1.FileName);
+                        
 
                         this.Label1.Text = this.FileUpload1.PostedFile.FileName;
                         this.Label2.Text = this.FileUpload1.PostedFile.ContentLength + "字节.";
