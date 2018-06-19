@@ -27,7 +27,7 @@ namespace wenbook.DAL
         {
             string cmdText = "insert into T_Library(libName,introduce,phone,province,city,address,isDelete) values(@libName,@introduce,@phone,@province,@city,@address,@isDelete)";
             string[] paramList = { "@libName","@introduce","@phone","@province","@city","@address","@isDelete" };
-            object[] valueList = {user.name,user.inthro,user.phone,user.province,user.city,user.adreess,0};
+            object[] valueList = {user.name,user.intrduce,user.phone,user.province,user.city,user.adreess,0};
             return db.ExecuteNoneQuery(cmdText, paramList, valueList);
         }
 
@@ -41,8 +41,8 @@ namespace wenbook.DAL
 
         public int fileupEbook(FileUploadInfo file)
         {
-            string cmdText = "insert into T_Ebook(EbookName,author,type,introduce,pathID,viewTiames) values(@EbookName,@author,@type,@introduce,@pathID,@viewTiames)";
-            string[] paramList = { "@EbookName", "@author", "@type", "@introduce", "@pathID", "@viewTiames" };
+            string cmdText = "insert into T_Ebook(EbookName,author,type,introduce,pathID,viewTimes) values(@EbookName,@author,@type,@introduce,@pathID,@viewTimes)";
+            string[] paramList = { "@EbookName", "@author", "@type", "@introduce", "@pathID", "@viewTimes" };
             object[] valueList = { file.name, file.inthro, file.type, file.intrduce, file.bookID, 0 };
             return db.ExecuteNoneQuery(cmdText, paramList, valueList);
         }
@@ -64,17 +64,17 @@ namespace wenbook.DAL
             return db.ExecuteNoneQuery(cmdText, paramList, valuesList);
         }
 
-        public FileUploadInfo Query(string path)
+        public FileUploadInfo Query(string name)
         {
             string cmdText = "select * from T_Path where path = @path";
             string[] paramList = { "@path" };
-            object[] valueList = { path };
+            object[] valueList = { name };
             SqlDataReader reader = db.ExecuteReader(cmdText, paramList, valueList);
             FileUploadInfo user = new  FileUploadInfo();
             if (reader.Read())
             {
                 user.path= reader["pathID"].ToString();
-                user.type = reader["type"].ToString();
+                
                 
             }
             reader.Close();

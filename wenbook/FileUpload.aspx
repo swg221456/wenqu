@@ -170,8 +170,8 @@
 					            <ul class="nav nav-tabs" role="tablist">
 						            <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-home"></i><span>图片上传</span></a></li>
 						            <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-globe"></i><span>电子书上传</span></a></li>
-                                    <li role="presentation"><a href="#Section4" aria-controls="book" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i><span>图书馆信息上传</span></a></li>
-						            <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i><span>图书上传</span></a></li>
+                                    <li role="presentation"><a href="#Section4" aria-controls="book" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i><span>图书信息上传</span></a></li>
+						            <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i><span>图书馆信息上传</span></a></li>
 					            </ul>
 					            <!-- Tab panes -->
 					            <div class="tab-content tabs">
@@ -227,6 +227,8 @@
                                         <asp:TextBox ID="lobcty" CssClass="form-control" runat="server"></asp:TextBox>
                                          <asp:Label ID="Label13" runat="server" Text="详细地址:"></asp:Label>
                                         <asp:TextBox ID="adree" CssClass="form-control" runat="server"></asp:TextBox>
+                                         <br />
+                                         <asp:Label ID="libtishi" runat="server" Text=""></asp:Label>
                                          
                                             <asp:Button ID="Button3" runat="server" CssClass="btn btn-large btn-danger" Text="上传" OnClick="Button5_Click" />
                                     </div>

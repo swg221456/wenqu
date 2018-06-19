@@ -89,7 +89,6 @@ namespace wenbook.Bll
             FileUploadInfo tep = dao.Query(user.path);
             if (tep != null)
             {
-
                 return tep;
             }
             else {
@@ -104,7 +103,7 @@ namespace wenbook.Bll
 
         public FileUploadInfo selectlib(FileUploadInfo user)
         {
-            FileUploadInfo tep = dao.Query(user.name);
+            FileUploadInfo tep = dao.Querylib(user.path);
             if (tep != null)
             {
 
