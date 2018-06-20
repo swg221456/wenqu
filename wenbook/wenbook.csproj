@@ -98,6 +98,8 @@
     <Content Include="css\libweb.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="image\pic1.jpg" />
+    <Content Include="image\pic2.jpg" />
     <Content Include="js\filejs.js" />
     <Content Include="js\jquery-1.11.0.min.js" />
     <Content Include="MyLibrary.aspx" />

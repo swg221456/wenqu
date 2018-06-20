@@ -15,8 +15,13 @@
             margin-left:50px;
         }
         .libintext {
-            margin-top:-500px;
-            margin-left:50px;
+            
+            text-indent: 2em;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
         }
 
         .libphonetext {
@@ -33,7 +38,14 @@
     margin-right:auto;
 }
 
-.lib {
+.lib{
+    width:100%;
+}
+
+.sltlib p{
+    color:crimson;
+}
+.sltlib {
     width:100%;
 }
 
