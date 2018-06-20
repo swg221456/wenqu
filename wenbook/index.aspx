@@ -11,6 +11,66 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
+    <style type="text/css">
+        .ps_hear {
+            font-size:18px;
+            color:darkgray;
+        }
+        .ps_item a{
+            color:black;
+            text-decoration:none;
+        }
+        .ps_item a:hover{
+ 
+            color:red;
+        }
+
+        .ps_tem a{
+            color:black;
+            text-decoration:none;
+        }
+        .ps_tem a:hover{
+ 
+            color:red;
+        }
+
+
+
+
+
+        .libpic {
+            width:200px;
+            height:200px;
+            margin-left:0px;
+            background-color:aqua;
+            float:left;
+
+        }
+        .libnametext {
+            font-size:20px;
+            margin-top:-600px;
+            margin-left:50px;
+        }
+        .libintext {
+            
+            text-indent: 2em;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+        }
+
+        .libphonetext {
+            margin-top:-80px;
+            color:darkgray;
+        }
+
+        .libcttext {
+            margin-right:0px;
+
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -179,34 +239,39 @@
 
                 <div class="bookimg">
 
-                    <div class="booknavba col-xs-12 col-sm-12">  
-                        <div class="booknav booknav2 col-sm-12 col-xs-12">      
-                        <a href="#"><img src="image/log.jpeg"  alt="Image"></a>
+                     
                         
-                      
-                            <h3><a href="#">书名</a></h3>
-                            <p><a href="#">作者</a></p>
-                            <p>小小妇科大夫叶诸（野猪）一脚踏进花都， 凭借神奇医术征服清纯俏护士，美艳女教师，暴力警花</p>
+                         <asp:GridView ID="GridView3" CssClass="col-xs-12 col-sm-12" runat="server" AutoGenerateColumns="False" DataKeyNames="ebookID" DataSourceID="SqlDataSource1" Width="100%" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None" AllowPaging="True" PageSize="6" AllowCustomPaging="True">
+            <AlternatingRowStyle BackColor="PaleGoldenrod" />
+            <Columns>
+                <asp:TemplateField HeaderText="热搜榜">
+                    <ItemTemplate>
+                        <div>
+                        <a href="#"><asp:Image ID="Image1" runat="server" ImageUrl="~/image/pic1.jpg" CssClass="libpic" Height="135px" Width="203px" /></a>
+                        
+                        <a href="#"><asp:Label ID="libname" runat="server" CssClass="libnametext" Text='<%# Eval("ebookName") %>'></asp:Label></a>
+                            <br />
+                        <asp:Label ID="libinth" runat="server" CssClass="libintext" Text='<%# Eval("author") %>'></asp:Label>
+                            <br />
+                        <asp:Label ID="Label1" runat="server" CssClass="libcttext" Text='<%# Eval("introduce") %>'></asp:Label>
                         </div>
+                    </ItemTemplate>
+                    <HeaderStyle BorderColor="Red" BorderStyle="None" CssClass="ssd" Font-Size="XX-Large" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <ItemStyle CssClass="ps_tem" BorderStyle="None" />
+                </asp:TemplateField>
+            </Columns>
+            <FooterStyle BackColor="Tan" />
+            <HeaderStyle BackColor="Tan" Font-Bold="True" />
+            <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+            <SortedAscendingCellStyle BackColor="#FAFAE7" />
+            <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+            <SortedDescendingCellStyle BackColor="#E1DB9C" />
+            <SortedDescendingHeaderStyle BackColor="#C2A47B" />
+        </asp:GridView>
 
-                        <div class="booknav booknav2 col-sm-12 col-xs-12">      
-                            <a href="#"><img src="image/log.jpeg"  alt="Image"></a>
-                        
-                      
-                            <h3><a href="#">书名</a></h3>
-                            <p><a href="#">作者</a></p>
-                            <p>小小妇科大夫叶诸（野猪）一脚踏进花都， 凭借神奇医术征服清纯俏护士，美艳女教师，暴力警花</p>
-                        </div>
 
-                        <div class="booknav booknav2 col-sm-12 col-xs-12">      
-                            <a href="#"><img src="image/log.jpeg"  alt="Image"></a>
-                        
-                      
-                            <h3><a href="#">书名</a></h3>
-                            <p><a href="#">作者</a></p>
-                            <p>小小妇科大夫叶诸（野猪）一脚踏进花都， 凭借神奇医术征服清纯俏护士，美艳女教师，暴力警花</p>
-                        </div>
-                    </div>
+                   
 
                 </div>
 
@@ -365,35 +430,60 @@
 
             <div class="bookrank hidden-sm hidden-xs hidden-md col-lg-2">
                 <div class="rankz">
-                    <h4>下载排行</h4>
-                    <ol>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                    </ol>
+                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ebookID" DataSourceID="SqlDataSource1" BorderStyle="None" CellPadding="4" ForeColor="#333333" GridLines="None" Height="279px" AllowCustomPaging="True" Width="152px" AllowPaging="True">
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <Columns>
+                <asp:TemplateField HeaderText="下载排行榜" InsertVisible="false" >
+                    <ItemTemplate>
+                        <%# Container.DataItemIndex + 1 %>.
+                        <a href="#"><asp:Label ID="Label1" runat="server" Text='<%# Eval("ebookName") %>'></asp:Label></a>
+                    </ItemTemplate>
+                    
+                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" CssClass="ps_item" />
+                </asp:TemplateField>
+            </Columns>
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AqueductConnectionString %>" SelectCommand="SELECT * FROM [T_Ebook] ORDER BY [viewTimes]"></asp:SqlDataSource>
+
                 </div>
 
                 <div class="rankr">
-                    <h4>阅读排行</h4>
-                    <ol>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                    </ol>
+                   
+                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="bookID" DataSourceID="SqlDataSource2" BorderStyle="None" CellPadding="4" ForeColor="#333333" GridLines="None" Height="279px" AllowCustomPaging="True" Width="152px" AllowPaging="True">
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+              <Columns>
+                  <asp:TemplateField HeaderText="阅读排行榜">
+                      <ItemTemplate>
+                           <%# Container.DataItemIndex + 1 %>.
+                          <a href="#"><asp:Label ID="Label2" runat="server" Text='<%# Eval("bookName") %>'></asp:Label></a>
+                      </ItemTemplate>
+                      <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" CssClass="ps_item" />
+                  </asp:TemplateField>
+              </Columns>
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AqueductConnectionString %>" SelectCommand="SELECT * FROM [T_Book] ORDER BY [borrowTimes]"></asp:SqlDataSource>
+
+
                 </div>
 
                 

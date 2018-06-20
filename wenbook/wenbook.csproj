@@ -98,8 +98,20 @@
     <Content Include="css\libweb.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="image\001.jpg" />
+    <Content Include="image\09.png" />
+    <Content Include="image\10.png" />
+    <Content Include="image\11.png" />
+    <Content Include="image\12.png" />
+    <Content Include="image\13.png" />
+    <Content Include="image\14.png" />
+    <Content Include="image\a17.png" />
+    <Content Include="image\apple-touch-icon-114-precomposed.png" />
+    <Content Include="image\apple-touch-icon-144-precomposed.png" />
+    <Content Include="image\favicon.png" />
     <Content Include="image\pic1.jpg" />
     <Content Include="image\pic2.jpg" />
+    <Content Include="image\t01.png" />
     <Content Include="js\filejs.js" />
     <Content Include="js\jquery-1.11.0.min.js" />
     <Content Include="MyLibrary.aspx" />
@@ -115,6 +127,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="image\.DS_Store" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

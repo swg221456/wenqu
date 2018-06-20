@@ -168,12 +168,13 @@ body{
     text-align: center;
 }
 .bigimg{
-    height: 400px;
-    background-color: khaki;
+    height: 700px;
+    background-color:aquamarine;
 }
 
 .bookimg{
-    height: 700px;
+    margin-top:0px;
+    height: 900px;
 
 }
 
@@ -225,7 +226,8 @@ body{
 
 
 .bookcs{
-    height: 300px;
+    margin-top:300px;
+    height: 600px;
 
 }
 
