@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\libweb.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="js\filejs.js" />

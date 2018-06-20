@@ -32,7 +32,7 @@
 
                 
 
-                <button type="button" class="btnnav navbar-toggle" data-toggle="collapse"
+                <button type="button" class="btnnav navbar-toggle btn-small" data-toggle="collapse"
                         data-target="#navsce">
                         <span class="sr-only">切换导航</span>
                         <span class="icon-bar"></span>

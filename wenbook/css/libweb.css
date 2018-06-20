@@ -1,0 +1,39 @@
+﻿body {
+}
+
+.libpic {
+            width:200px;
+            height:200px;
+            margin-left:0px;
+            background-color:aqua;
+            float:left;
+
+        }
+        .libnametext {
+            font-size:20px;
+            margin-top:-600px;
+            margin-left:50px;
+        }
+        .libintext {
+            margin-top:-500px;
+            margin-left:50px;
+        }
+
+        .libphonetext {
+            margin-top:-80px;
+            color:darkgray;
+        }
+
+        .libcttext {
+            margin-right:0px;
+
+        }
+.libdiv h3{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.lib {
+    width:100%;
+}
+
