@@ -25,25 +25,25 @@ namespace wenbook.DAL
 
         public int Addlib(FileUploadInfo user)
         {
-            string cmdText = "insert into T_Library(libName,introduce,phone,province,city,address,isDelete) values(@libName,@introduce,@phone,@province,@city,@address,@isDelete)";
-            string[] paramList = { "@libName","@introduce","@phone","@province","@city","@address","@isDelete" };
-            object[] valueList = {user.name,user.intrduce,user.phone,user.province,user.city,user.adreess,0};
+            string cmdText = "insert into T_Library(libName,introduce,phone,province,city,address,isDelete,path) values(@libName,@introduce,@phone,@province,@city,@address,@isDelete,@path)";
+            string[] paramList = { "@libName","@introduce","@phone","@province","@city","@address","@isDelete", "path" };
+            object[] valueList = {user.name,user.intrduce,user.phone,user.province,user.city,user.adreess,0,user.path};
             return db.ExecuteNoneQuery(cmdText, paramList, valueList);
         }
 
-        public int fileupbook(FileUploadInfo file)
+        public int fileupbook(UpBook file)
         {
-            string cmdText = "insert into T_Book(bookName,author,introduce,type,maxCount,usableCount,libID,borrowTimes,isDelete) values(@EbookName,@author,@introduce,@type,@maxCount,@usableCount,@libID,@borrowTimes,@isDelete)";
-            string[] paramList = { "@EbookName", "@author", "@introduce" ,"@maxCount","@usableCount","type","@libID","@borrowTimes","@isDelete" };
-            object[] valueList = {file.name , file.inthro , file.intrduce,file.maxcount,file.usablecount,file.type,file.bookID,0,0};
+            string cmdText = "insert into T_Book(bookName,author,introduce,type,maxCount,usableCount,libID,borrowTimes,isDelete,path) values(@EbookName,@author,@introduce,@type,@maxCount,@usableCount,@libID,@borrowTimes,@isDelete,@path)";
+            string[] paramList = { "@EbookName", "@author", "@introduce" ,"@maxCount","@usableCount","type","@libID","@borrowTimes","@isDelete", "@path" };
+            object[] valueList = {file.name , file.inthro , file.intrduce,file.maxcount,file.usablecount,file.type,file.bookID,0,0,file.path};
             return db.ExecuteNoneQuery(cmdText, paramList, valueList);
         }
 
-        public int fileupEbook(FileUploadInfo file)
+        public int fileupEbook(UpEbook file)
         {
-            string cmdText = "insert into T_Ebook(EbookName,author,type,introduce,pathID,viewTimes) values(@EbookName,@author,@type,@introduce,@pathID,@viewTimes)";
-            string[] paramList = { "@EbookName", "@author", "@type", "@introduce", "@pathID", "@viewTimes" };
-            object[] valueList = { file.name, file.inthro, file.type, file.intrduce, file.bookID, 0 };
+            string cmdText = "insert into T_Ebook(EbookName,author,type,introduce,pathID,viewTimes,path) values(@EbookName,@author,@type,@introduce,@pathID,@viewTimes,@path)";
+            string[] paramList = { "@EbookName", "@author", "@type", "@introduce", "@pathID", "@viewTimes", "@path" };
+            object[] valueList = { file.name, file.inthro, file.type, file.intrduce, file.bookID, 0,file.path };
             return db.ExecuteNoneQuery(cmdText, paramList, valueList);
         }
 
@@ -83,7 +83,7 @@ namespace wenbook.DAL
 
         public FileUploadInfo Querylib(string libName)
         {
-            string cmdText = "select * from T_Library where  libName= @libName";
+            string cmdText = "select * from T_Library where  libName = @libName";
             string[] paramList = { "@libName" };
             object[] valueList = { libName };
             SqlDataReader reader = db.ExecuteReader(cmdText, paramList, valueList);

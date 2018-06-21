@@ -197,6 +197,8 @@
     </Compile>
     <Compile Include="model\FileUploadInfo.cs" />
     <Compile Include="model\logon.cs" />
+    <Compile Include="model\UpBook.cs" />
+    <Compile Include="model\UpEbook.cs" />
     <Compile Include="MyLibrary.aspx.cs">
       <DependentUpon>MyLibrary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

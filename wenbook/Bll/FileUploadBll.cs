@@ -52,7 +52,7 @@ namespace wenbook.Bll
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public OperationResult Registfile(FileUploadInfo file)
+        public OperationResult Registfile(UpEbook file)
         {
 
             int mun = dao.fileupEbook(file);
@@ -69,7 +69,7 @@ namespace wenbook.Bll
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public OperationResult Registbook(FileUploadInfo file)
+        public OperationResult Registbook(UpBook file)
         {
 
             int mun = dao.fileupbook(file);
@@ -103,7 +103,7 @@ namespace wenbook.Bll
 
         public FileUploadInfo selectlib(FileUploadInfo user)
         {
-            FileUploadInfo tep = dao.Querylib(user.path);
+            FileUploadInfo tep = dao.Querylib(user.name);
             if (tep != null)
             {
 

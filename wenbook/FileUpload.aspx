@@ -168,52 +168,17 @@
 				            <div class="tab" role="tabpanel">
 					            <!-- Nav tabs -->
 					            <ul class="nav nav-tabs" role="tablist">
-						            <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-home"></i><span>图片上传</span></a></li>
+						            <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-home"></i><span>电子书上传</span></a></li>
 						            <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-globe"></i><span>电子书上传</span></a></li>
-                                    <li role="presentation"><a href="#Section4" aria-controls="book" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i><span>图书信息上传</span></a></li>
-						            <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i><span>图书馆信息上传</span></a></li>
+                                    <li role="presentation"><a href="#Section3" aria-controls="book" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i><span>图书信息上传</span></a></li>
+						            
 					            </ul>
 					            <!-- Tab panes -->
 					            <div class="tab-content tabs">
 						            <div role="tabpanel" class="tab-pane fade in active upphoto" id="Section1">
-							            <h3>图片上传</h3>
-							            
-                                            <asp:FileUpload ID="FileUpload1" CssClass="upload" runat="server" BorderStyle="None" />
- 
-                                    
-                                            <p>原文件路径:</p>
-                                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                                            <p>文件大小:</p>
-                                            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
-                                            <p>文件类型:</p>
-                                            <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
-                                            <br />
-                                            <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
-                                            <br />
-                                            <asp:Image ID="Image1" runat="server" CssClass="fileclass" ImageUrl="~/image/book.jpg"  />
-
-                                            <asp:Button ID="Button1" runat="server" CssClass="btn btn-large btn-danger" Text="上传" OnClick="Button3_Click" />
-                                    </div>
-						            <div role="tabpanel" class="tab-pane fade updbook" id="Section2">
-							            <h3>电子书上传</h3>
-                                        <asp:FileUpload ID="FileUpload2" CssClass="upload" runat="server" BorderStyle="None" />
-
-                                        <asp:Label ID="Label5" runat="server" Text="书名:"></asp:Label>
-                                        <asp:TextBox ID="EbookName" CssClass="form-control" runat="server"></asp:TextBox>
-                                        <asp:Label ID="Label6" runat="server" Text="作者:"></asp:Label>
-                                        <asp:TextBox ID="Eauthor" CssClass="form-control" runat="server"></asp:TextBox>
-                                        <asp:Label ID="Label7" runat="server" Text="简介:"></asp:Label>
-                                        <asp:TextBox ID="Eintrduce" CssClass="form-control" runat="server"></asp:TextBox>
-                                        <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
-                                        <br />
-                                        <asp:Image ID="Image2" runat="server" CssClass="fileclass" ImageUrl="~/image/book.jpg"  />
-                                        <br />
-                                        <asp:Label ID="ebooktishi" runat="server" Text=""></asp:Label>
-
-                                        <asp:Button ID="Esm" runat="server" CssClass="btn btn-large btn-danger" Text="上传" OnClick="Button2_Click1"/>
-							         </div>
-                                     <div role="tabpanel" class="tab-pane fade in active upphoto" id="Section3">
 							            <h3>图书馆信息上传</h3>
+							            
+                                            <asp:Label ID="Label1" runat="server" Text="选择图片"></asp:Label><asp:FileUpload ID="FileUpload1" CssClass="upload" runat="server" BorderStyle="None" />
 
                                         <asp:Label ID="Label11" runat="server" Text="图书馆名:"></asp:Label>
                                         <asp:TextBox ID="libname" CssClass="form-control" runat="server"></asp:TextBox>
@@ -230,12 +195,37 @@
                                          <br />
                                          <asp:Label ID="libtishi" runat="server" Text=""></asp:Label>
                                          
-                                            <asp:Button ID="Button3" runat="server" CssClass="btn btn-large btn-danger" Text="上传" OnClick="Button5_Click" />
-                                    </div>
+                                         
+                                            <asp:Image ID="Image1" runat="server" CssClass="fileclass" ImageUrl="~/image/book.jpg"  />
 
-						            <div role="tabpanel" class="tab-pane fade uptbok" id="Section4">
+                                            <asp:Button ID="Button1" runat="server" CssClass="btn btn-large btn-danger" Text="上传" OnClick="Button3_Click" />
+                                    </div>
+						            <div role="tabpanel" class="tab-pane fade updbook" id="Section2">
+							            <h3>电子书上传</h3>
+                                        <asp:Label ID="Label2" runat="server" Text="选择图片："></asp:Label><asp:FileUpload ID="FileUpload2" CssClass="upload" runat="server" BorderStyle="None" />
+                                        <asp:Label ID="Label3" runat="server" Text="选择文件："></asp:Label><asp:FileUpload ID="FileUpload3" CssClass="upload" runat="server" BorderStyle="None" />
+
+                                        <asp:Label ID="Label5" runat="server" Text="书名:"></asp:Label>
+                                        <asp:TextBox ID="EbookName" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:Label ID="Label6" runat="server" Text="作者:"></asp:Label>
+                                        <asp:TextBox ID="Eauthor" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:Label ID="Label7" runat="server" Text="简介:"></asp:Label>
+                                        <asp:TextBox ID="Eintrduce" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                                        <br />
+                                        <asp:Image ID="Image2" runat="server" CssClass="fileclass" ImageUrl="~/image/book.jpg"  />
+                                        <br />
+                                        <asp:Label ID="ebooktishi" runat="server" Text=""></asp:Label>
+
+                                        <asp:Button ID="Esm" runat="server" CssClass="btn btn-large btn-danger" Text="上传" OnClick="Button2_Click1"/>
+							         </div>
+                                     
+
+						            <div role="tabpanel" class="tab-pane fade uptbok" id="Section3">
 							            <h3>图书上传</h3> 
-                                        
+
+                                        <asp:Label ID="Label4" runat="server" Text="选择图片："></asp:Label><asp:FileUpload ID="FileUpload4" CssClass="upload" runat="server" BorderStyle="None" />
+
                                         <asp:Label ID="Label8" runat="server" Text="书名:"></asp:Label>
                                         <asp:TextBox ID="bookName" CssClass="form-control" runat="server"></asp:TextBox>
                                         <asp:Label ID="Label9" runat="server" Text="作者:"></asp:Label>

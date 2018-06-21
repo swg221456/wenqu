@@ -47,14 +47,13 @@ namespace wenbook
                         this.Image1.ImageUrl = "~/image/" + FileUpload1.FileName;
                         
 
-                        this.Label1.Text = this.FileUpload1.PostedFile.FileName;
-                        this.Label2.Text = this.FileUpload1.PostedFile.ContentLength + "字节.";
-                        this.Label3.Text = this.FileUpload1.PostedFile.ContentType;
+                        string path = this.FileUpload1.PostedFile.FileName;
+                        
 
-                        FileUploadInfo info = new FileUploadInfo(this.Label1.Text, this.Label3.Text);
-                        this.FileUpload1.SaveAs(Server.MapPath("~/UploadPic/") + FileUpload1.FileName);
+                        FileUploadInfo info = new FileUploadInfo(this.libname.Text, this.lobintr.Text, this.libphone.Text, this.lobpro.Text, this.lobcty.Text, this.adree.Text,path);
+                        
 
-                        OperationResult op = bll.Regist(info);
+                        OperationResult op = bll.Registlib(info);
                         if (op.ToString() == "exist")
                         {
                             this.Label4.Text = "记录已存在";
@@ -62,6 +61,7 @@ namespace wenbook
                         else if (op.ToString() == "success")
                         {
                             this.Label4.Text = "成功";
+                            this.FileUpload1.SaveAs(Server.MapPath("~/UploadPic/") + FileUpload1.FileName);
                         }
                         else
                         {
@@ -99,24 +99,17 @@ namespace wenbook
                 {
                     try
                     {
-                       
+                        this.Image2.ImageUrl = "~/image/" + FileUpload2.FileName;
 
-                        string name = this.FileUpload2.PostedFile.FileName;
-                        string type = this.FileUpload2.PostedFile.ContentType;
+                        string picpath = this.FileUpload2.PostedFile.FileName;
+                        string path = this.FileUpload3.PostedFile.FileName;
 
-                        FileUploadInfo info = new FileUploadInfo(name, type);
+                      
 
-
-                        OperationResult op = bll.Regist(info);
-                        
-
-                            FileUploadInfo lbg = new FileUploadInfo(name, this.Eauthor.Text);
-
-                            lbg = bll.select(lbg);
 
                             string etype = DropDownList1.SelectedValue.ToString();
 
-                            FileUploadInfo lg = new FileUploadInfo(this.EbookName.Text, this.Eauthor.Text, this.intrduce.Text,etype, lbg.path);
+                            UpEbook lg = new UpEbook(this.EbookName.Text, this.Eauthor.Text, this.intrduce.Text,etype,path,picpath);
                             OperationResult bp = bll.Registfile(lg);
 
                             if (bp.ToString() == "exist")
@@ -128,7 +121,8 @@ namespace wenbook
 
                                
                                 this.FileUpload2.SaveAs(Server.MapPath("~/UploadPic/") + FileUpload2.FileName);
-                                this.ebooktishi.Text = "成功.";
+                            this.FileUpload3.SaveAs(Server.MapPath("~/Etext/") + FileUpload3.FileName);
+                            this.ebooktishi.Text = "成功.";
 
                         }
                             else
@@ -146,25 +140,7 @@ namespace wenbook
             }
         }
 
-        protected void Button5_Click(object sender, EventArgs e)
-        {
-            FileUploadInfo lg = new FileUploadInfo(this.libname.Text, this.lobintr.Text, this.libphone.Text, this.lobpro.Text, this.lobcty.Text, this.adree.Text);
-            OperationResult bp = bll.Registlib(lg);
-
-            if (bp.ToString() == "exist")
-            {
-                this.libtishi.Text = "记录已存在";
-            }
-            else if (bp.ToString() == "success")
-            {
-                this.libtishi.Text = "成功";
-
-            }
-            else
-            {
-                this.libtishi.Text = "意外";
-            }
-        }
+       
 
         protected void Button6_Click(object sender, EventArgs e)
         {
@@ -172,9 +148,13 @@ namespace wenbook
 
             lbg = bll.selectlib(lbg);
             string type = DropDownList2.SelectedValue.ToString();
+            string picpath = this.FileUpload4.PostedFile.FileName;
 
-            FileUploadInfo lg = new FileUploadInfo(this.bookName.Text,this.author.Text,this.intrduce.Text,type, this.maxcount.Text,this.usablecount.Text,lbg.path);
+            UpBook lg = new UpBook(this.bookName.Text,this.author.Text,this.intrduce.Text,type, this.maxcount.Text,this.usablecount.Text,lbg.path,picpath);
             OperationResult bp = bll.Registbook(lg);
+
+            this.Image3.ImageUrl = "~/image/" + FileUpload4.FileName;
+
 
             if (bp.ToString() == "exist")
             {
@@ -183,7 +163,8 @@ namespace wenbook
             else if (bp.ToString() == "success")
             {
                 this.booktishi.Text = "成功.";
-                
+                this.FileUpload4.SaveAs(Server.MapPath("~/UploadPic/") + FileUpload4.FileName);
+
 
             }
             else
