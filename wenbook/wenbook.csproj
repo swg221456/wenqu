@@ -109,6 +109,16 @@
     <Content Include="image\apple-touch-icon-114-precomposed.png" />
     <Content Include="image\apple-touch-icon-144-precomposed.png" />
     <Content Include="image\favicon.png" />
+    <Content Include="image\n1.jpg" />
+    <Content Include="image\n10.jpg" />
+    <Content Include="image\n2.jpg" />
+    <Content Include="image\n3.jpg" />
+    <Content Include="image\n4.jpg" />
+    <Content Include="image\n5.jpg" />
+    <Content Include="image\n6.jpg" />
+    <Content Include="image\n7.jpg" />
+    <Content Include="image\n8.jpg" />
+    <Content Include="image\n9.jpg" />
     <Content Include="image\pic1.jpg" />
     <Content Include="image\pic2.jpg" />
     <Content Include="image\t01.png" />

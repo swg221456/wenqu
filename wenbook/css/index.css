@@ -226,7 +226,7 @@ body{
 
 
 .bookcs{
-    margin-top:300px;
+    margin-top:100px;
     height: 600px;
 
 }
@@ -308,3 +308,111 @@ a:hover{
     font-size: 12px;
     color: darkgray;
 }
+
+
+
+ .piccs {
+            width:800px;
+            height:600px;
+            
+
+        }
+
+        
+
+        table,th,td{
+            border:0px none ;
+            padding:0px;
+        }
+        th {
+            border:0px none;
+
+        }
+        td {
+             border:0px none;
+
+             margin-top:0px;
+             margin-bottom:0px;
+             margin-left:0px;
+             margin-right:0px;
+
+        }
+
+        .picsty {
+            width:200px;
+            height:200px;
+            background-color:aqua;
+            float:left;
+        }
+
+        a {
+            text-decoration:none;
+        }
+
+        .picas {
+            width:200px;
+            height:400px;
+            margin-top:-200px;
+            margin-left:200px;
+        }
+        .picqs {
+            width:400px;
+            height:200px;
+            margin-top:0px;
+        }
+
+        .picqq {
+            width:400px;
+            height:200px;
+           
+        }
+
+
+        
+        
+
+        .a1 {
+            width:200px;
+            height:200px;
+            z-index:-5;
+            
+        }
+        .a2 {
+            color:white;
+            font-size:20px;
+            z-index:20;
+            margin-top:-100px;
+            margin-left:80px;
+            float:left;
+            
+        }
+        
+        .p10 {
+            
+            margin-top:-200px;
+            margin-left:600px;
+        }
+
+        .p11 {
+            
+            margin-top:-0px;
+            margin-left:600px;
+        }
+
+        .aa1 {
+            color:white;
+            font-size:20px;
+            z-index:40;
+            position:absolute;
+            left:160px;
+            margin-top:-120px;
+
+        }
+        .aa2 {
+            color:white;
+            font-size:20px;
+            z-index:40;
+            position:absolute;
+            margin-left:260px;
+            margin-top:-260px;
+        }

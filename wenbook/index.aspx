@@ -247,7 +247,7 @@
                 <asp:TemplateField HeaderText="热搜榜">
                     <ItemTemplate>
                         <div>
-                        <a href="#"><asp:Image ID="Image1" runat="server" ImageUrl="~/image/pic1.jpg" CssClass="libpic" Height="135px" Width="203px" /></a>
+                        <a href="#"><asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/image/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" /></a>
                         
                         <a href="#"><asp:Label ID="libname" runat="server" CssClass="libnametext" Text='<%# Eval("ebookName") %>'></asp:Label></a>
                             <br />
@@ -274,6 +274,57 @@
                    
 
                 </div>
+
+
+                <div class="piccs">
+            <div class="picsty">
+                <asp:Image ID="Image2" CssClass="picsty a1" ImageUrl="~/image/n1.jpg" runat="server" />
+                <a href="#" class="a2"><p>玄幻</p></a>
+            </div>
+            <div class="picsty">
+                <asp:Image ID="Image3" CssClass="picsty a1" ImageUrl="~/image/n2.jpg" runat="server" />
+                <a href="#"  class="a2"><p>都市传奇</p></a>
+            </div>
+            <div class="picsty">
+                <asp:Image ID="Image4" CssClass="picsty a1" ImageUrl="~/image/n3.jpg" runat="server" />
+                <a href="#"  class="a2"><p>历史</p></a>
+            </div>
+            <div class="picsty">
+                <asp:Image ID="Image5" CssClass="picsty a1" ImageUrl="~/image/n4.jpg" runat="server" />
+                <a href="#"  class="a2"><p>悬疑</p></a>
+            </div>
+            <div class="picsty">
+                <asp:Image ID="Image6" CssClass="picsty a1" ImageUrl="~/image/n5.jpg" runat="server" />
+                <a href="#"  class="a2"><p>科幻</p></a>
+            </div>
+            <div class="picsty">
+                <asp:Image ID="Image7" CssClass="picsty a1" ImageUrl="~/image/n6.jpg" runat="server" />
+                <a href="#"  class="a2"><p>玄幻言情</p></a>
+            </div>
+            
+            <div class="picqs">
+                <asp:Image ID="Image8" CssClass="picqs" ImageUrl="~/image/n9.jpg" runat="server" />
+                <a href="#"  class="aa1"><p>浪漫青春</p></a>
+            </div>
+
+            <div class="picas">
+                <asp:Image ID="Image9" CssClass="picas" ImageUrl="~/image/n7.jpg" runat="server" />
+                <a href="#"  class="aa2"><p>古代言情</p></a>
+            </div>
+
+            <div class="picsty p10">
+                <asp:Image ID="Image10" CssClass="picsty a1" ImageUrl="~/image/n8.jpg" runat="server"/>
+                <a href="#"  class="a2"><p>现代言情</p></a>
+            </div>
+
+             <div class="picsty p11">
+                <asp:Image ID="Image11" CssClass="picsty a1" ImageUrl="~/image/n10.jpg" runat="server"/>
+                <a href="#"  class="a2"><p>玄幻灵异</p></a>
+            </div>
+
+        </div>
+
+                <div class="p"></div>
 
                 <div class="bookcs">
                     <h3 style="text-align: center;">男频精选</h3>
