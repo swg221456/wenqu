@@ -98,6 +98,20 @@
     <Content Include="css\libweb.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="image\00001.jpg" />
+    <Content Include="image\00002.jpg" />
+    <Content Include="image\00003.jpg" />
+    <Content Include="image\00004.jpg" />
+    <Content Include="image\00005.jpg" />
+    <Content Include="image\00006.jpg" />
+    <Content Include="image\00007.jpg" />
+    <Content Include="image\00008.jpg" />
+    <Content Include="image\00009.jpg" />
+    <Content Include="image\00010.jpg" />
+    <Content Include="image\00011.jpg" />
+    <Content Include="image\00012.jpg" />
+    <Content Include="image\00013.jpg" />
+    <Content Include="image\00014.jpg" />
     <Content Include="image\001.jpg" />
     <Content Include="image\09.png" />
     <Content Include="image\10.png" />
@@ -109,6 +123,7 @@
     <Content Include="image\apple-touch-icon-114-precomposed.png" />
     <Content Include="image\apple-touch-icon-144-precomposed.png" />
     <Content Include="image\favicon.png" />
+    <Content Include="image\loading.gif" />
     <Content Include="image\n1.jpg" />
     <Content Include="image\n10.jpg" />
     <Content Include="image\n2.jpg" />
@@ -124,6 +139,8 @@
     <Content Include="image\t01.png" />
     <Content Include="js\filejs.js" />
     <Content Include="js\jquery-1.11.0.min.js" />
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\jssor.slider-21.1.6.mini.js" />
     <Content Include="MyLibrary.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
