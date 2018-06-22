@@ -31,7 +31,27 @@ namespace wenbook.model
         public string usablecount { get; set; }
 
 
-        
+        public UpBook()
+        {
+
+        }
+
+
+        public UpBook(string name)
+        {
+            this.name = name;
+        }
+
+        public UpBook(string name,string inthro,string intrduce,string type,string path)
+        {
+            this.name = name;
+            this.inthro = inthro;
+            this.intrduce = intrduce;
+            this.type = type;
+            this.path = path;
+        }
+
+
 
         public UpBook(string name, string inthro, string intrduce, string type, string maxcount, string usablecount, string bookID)
         {

@@ -94,6 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BookMessage.aspx" />
+    <Content Include="css\bookmessage.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\libweb.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -201,10 +203,19 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\BookBll.cs" />
     <Compile Include="Bll\DES.cs" />
     <Compile Include="Bll\FileUploadBll.cs" />
     <Compile Include="Bll\Global.cs" />
     <Compile Include="Bll\logonBll.cs" />
+    <Compile Include="BookMessage.aspx.cs">
+      <DependentUpon>BookMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookMessage.aspx.designer.cs">
+      <DependentUpon>BookMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BookDAL.cs" />
     <Compile Include="DAL\fileuploadDAL.cs" />
     <Compile Include="DAL\logonDAL.cs" />
     <Compile Include="FileUpload.aspx.cs">
@@ -222,6 +233,7 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="model\EbookInfo.cs" />
     <Compile Include="model\FileUploadInfo.cs" />
     <Compile Include="model\logon.cs" />
     <Compile Include="model\UpBook.cs" />

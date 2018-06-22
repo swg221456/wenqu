@@ -1,0 +1,73 @@
+﻿using GTS.DBHelper;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using wenbook.Bll;
+using wenbook.model;
+
+namespace wenbook
+{
+    public partial class BookMessage : System.Web.UI.Page
+    {
+        BookBll bll = new BookBll();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Session["type"] = "e";
+            Session["name"] = "汉乡";
+
+            if (Session["type"].ToString() == null)
+            {
+
+            }
+            else if (Session["type"].ToString() == "e")
+            {
+                this.jieyue.Visible = false;
+                string name = Session["name"].ToString();
+                UpEbook lg = new UpEbook(name);
+                lg = bll.selectebook(lg);
+                if (lg.path != null)
+                {
+                    this.smname.Text = lg.name.ToString();
+                    this.name.Text = lg.name.ToString();
+                    this.inth.Text = lg.inthro.ToString();
+                    this.intrduce.Text = lg.intrduce.ToString();
+                    this.smtype.Text = lg.type.ToString();
+
+
+                    this.Image1.ImageUrl = "~/image/" + lg.path.ToString() + " ";
+
+                    Session["path"] = lg.path.ToString();
+                }
+                
+                    this.Image1.ImageUrl = "~/image/pic1.jpg";
+                
+            }
+            else if (Session["type"].ToString() == "b")
+            {
+               
+                    string name = Session["name"].ToString();
+                    UpBook lg = new UpBook(name);
+                    lg = bll.selectbook(lg);
+                    if (lg.path != null)
+                    {
+                    this.smname.Text = lg.name.ToString();
+                    this.name.Text = lg.name.ToString();
+                    this.inth.Text = lg.inthro.ToString();
+                    this.intrduce.Text = lg.intrduce.ToString();
+                    this.smtype.Text = lg.type.ToString();
+
+                    this.Image1.ImageUrl = "~/image/" + lg.path.ToString() + " ";
+                    
+
+                }
+
+                
+                    this.Image1.ImageUrl = "~/image/pic1.jpg";
+                
+            }
+        }
+    }
+}
