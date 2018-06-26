@@ -1,0 +1,53 @@
+﻿.topcs{
+    margin-top:0px;
+    width:100%;
+    height:400px;
+    background-color:#f9f9fb;
+}
+
+.sp1 {
+    
+    font-size:16px;
+    color:#999999;
+}
+
+.pp {
+    padding-top:30px;
+}
+
+.btn4 {
+    font-size:16px;
+    height:40px;
+    width:100px;
+    margin-left:30px;
+}
+
+
+
+.btn2 {
+    font-size:16px;
+    height:40px;
+    width:60px;
+    margin-left:30px;
+}
+
+.sp2{
+    
+    color: black;
+    font-size:20px;
+    margin-left:20px;
+}
+
+.sp3{
+    color: black;
+    font-size:20px;
+    margin-left:40px;
+}
+
+a {
+    color:black;
+}
+a:hover{
+    color:red;
+}
+
