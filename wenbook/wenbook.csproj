@@ -204,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bll\BookBll.cs" />
+    <Compile Include="Bll\commentBll.cs" />
     <Compile Include="Bll\DES.cs" />
     <Compile Include="Bll\FileUploadBll.cs" />
     <Compile Include="Bll\Global.cs" />
@@ -216,6 +217,7 @@
       <DependentUpon>BookMessage.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\BookDAL.cs" />
+    <Compile Include="DAL\commemtDAL.cs" />
     <Compile Include="DAL\fileuploadDAL.cs" />
     <Compile Include="DAL\logonDAL.cs" />
     <Compile Include="FileUpload.aspx.cs">
@@ -233,6 +235,7 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="model\comment.cs" />
     <Compile Include="model\EbookInfo.cs" />
     <Compile Include="model\FileUploadInfo.cs" />
     <Compile Include="model\logon.cs" />

@@ -12,6 +12,49 @@
     <link rel="stylesheet" href="css/index.css"/>
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/bookmessage.css"/>
+    <style type="text/css">
+        .userpic{
+            width:20%;
+            height:60px;
+            float:left;
+        }
+        .username {
+            font-size:20px;
+            text-indent: 2em;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+        }
+
+        .time{
+            float:right;
+            color:darkgray;
+
+        }
+
+        .text {
+            margin-top:30px;
+            text-indent: 2em;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+        }
+        .count{
+            margin-top:20px;
+             text-indent: 2em;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+            color:darkgray;
+
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -89,14 +132,14 @@
                
                 <div class="bookmesdiv">
                     <span class="c1">
-                        <asp:Label ID="smtype" runat="server" Text="Label"></asp:Label></span>&nbsp;>&nbsp;<span class="c1"><asp:Label ID="smname" runat="server" Text="Label"></asp:Label></span>
+                        <asp:Label ID="smtype" runat="server" Text="异常"></asp:Label></span>&nbsp;>&nbsp;<span class="c1"><asp:Label ID="smname" runat="server" Text="异常"></asp:Label></span>
                     <br />
 
                     <asp:Image ID="Image1" CssClass="bookpic" ImageUrl='<%#"~/image/" +Session["name"].ToString()   %>' runat="server" />
                      
-                    <h2 class="textname c1"><asp:Label CssClass="textname" ID="name" runat="server" Text="Label"></asp:Label></h2>
-                    <p class="intext"><asp:Label ID="inth" runat="server" Text="Label"></asp:Label></p>
-                    <p class="cctext"><asp:Label ID="intrduce" runat="server" Text="Label"></asp:Label></p>
+                    <h2 class="textname c1"><asp:Label CssClass="textname" ID="name" runat="server" Text="异常"></asp:Label></h2>
+                    <p class="intext"><asp:Label ID="inth" runat="server" Text="异常"></asp:Label></p>
+                    <p class="cctext"><asp:Label ID="intrduce" runat="server" Text="异常"></asp:Label></p>
 
                     <asp:Button ID="Button1" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="开始阅读" />
 
@@ -122,8 +165,36 @@
                         <asp:Button ID="Button5" CssClass="btn btn-large btn-danger btnlogon btnl" runat="server" Text="登录" />
                         <h2><a class="zhuc" href="#">立即注册</a></h2>
 
+
+
                     </div>
-                    
+
+                    <div class="shuru">
+                        <asp:TextBox ID="textshuru" CssClass="submit" Width="80%" Height="50px" BackColor="#cccccc" Font-Size="X-Large" BorderStyle="Solid" BorderColor="#66ccff" runat="server"></asp:TextBox>
+                        <asp:Button ID="Button4" CssClass="btn btn-large btn-danger ttn" Width="10%"  Height="50px" BackColor="#666699" runat="server" Text="提交" OnClick="Button4_Click" />
+                    </div>
+                    <div class="pinglun">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="commentID" DataSourceID="SqlDataSource1" Width="100%" BorderStyle="None">
+            <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Image ID="Image1" runat="server" CssClass="userpic" ImageUrl="~/image/pic2.jpg" Height="143px" Width="101px" />
+                        <asp:Label ID="Label3" runat="server" CssClass="username" Text='<%# Eval("userName") %>'></asp:Label>
+                        <asp:Label ID="Label1" runat="server" CssClass="time" Text='<%# Eval("time") %>'></asp:Label>
+
+                        <asp:Label ID="Label2" runat="server" CssClass="text" Text='<%# Eval("reviewContent") %>'></asp:Label>
+                        
+                        <asp:Label ID="Label4" runat="server" CssClass="count" Text='<%# Eval("praiseCount") %>'></asp:Label>
+                    </ItemTemplate>
+                    <HeaderStyle BorderStyle="None" />
+                    <ItemStyle BorderStyle="None" />
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AqueductConnectionString %>" SelectCommand="SELECT * FROM [T_Comment] ORDER BY [time] DESC, [praiseCount] DESC"></asp:SqlDataSource>
+    
+
+                    </div>
 
                 </div>
 

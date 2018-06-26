@@ -7,16 +7,24 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using wenbook.Bll;
 using wenbook.model;
+using 问渠.Bll;
 
 namespace wenbook
 {
     public partial class BookMessage : System.Web.UI.Page
     {
         BookBll bll = new BookBll();
+        commentBll bal = new commentBll();
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["type"] = "e";
             Session["name"] = "汉乡";
+
+            if (Session["user"] == null)
+            {
+                this.textshuru.Visible = false;
+                this.Button4.Visible = false;
+            }
 
             if (Session["type"].ToString() == null)
             {
@@ -67,6 +75,49 @@ namespace wenbook
                 
                     this.Image1.ImageUrl = "~/image/pic1.jpg";
                 
+            }
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            
+            if (Session["user"] != null)
+            {
+                string username = Session["user"].ToString();
+
+                string bookname = Session["name"].ToString();
+
+                string text = this.textshuru.Text;
+
+                
+                int type = 0;
+                if (Session["type"].ToString() == "b")
+                {
+                     type = 0;
+                }
+                else
+                {
+                     type = 1;
+                    
+                }
+
+                comment lg = new comment(username,bookname,type,text,DateTime.Now.ToLocalTime().ToString());
+                OperationResult op = bal.Regist(lg);
+
+                if (op.ToString() == "exist")
+                {
+                    Response.Write( "记录已存在");
+                }
+                else if (op.ToString() == "success")
+                {
+                    Response.Write("成功");
+                }
+
+                else
+                {
+                    Response.Write("意外");
+                }
+
             }
         }
     }
