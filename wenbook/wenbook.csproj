@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="BookCity.aspx" />
     <Content Include="BookMessage.aspx" />
+    <Content Include="BookShelf.aspx" />
     <Content Include="css\bookcity.css" />
     <Content Include="css\bookmessage.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -224,6 +225,13 @@
     </Compile>
     <Compile Include="BookMessage.aspx.designer.cs">
       <DependentUpon>BookMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookShelf.aspx.cs">
+      <DependentUpon>BookShelf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookShelf.aspx.designer.cs">
+      <DependentUpon>BookShelf.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\BookDAL.cs" />
     <Compile Include="DAL\commemtDAL.cs" />
