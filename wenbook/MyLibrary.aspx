@@ -180,7 +180,7 @@
                 <asp:TemplateField>
                     <ItemTemplate>
                         <div>
-                        <asp:Image ID="Image1" runat="server" ImageUrl="~/image/pic1.jpg" CssClass="libpic" Height="135px" Width="203px" />
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/Uploadpic/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" />
                         
                         <asp:Label ID="libname" runat="server" CssClass="libnametext" Text='<%# Eval("libName") %>'></asp:Label>
                             <br />
@@ -205,7 +205,7 @@
         </asp:GridView>
 
     
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AqueductConnectionString %>" SelectCommand="SELECT [libName], [introduce], [phone], [province], [city], [address] FROM [T_Library]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AqueductConnectionString %>" SelectCommand="SELECT [libName], [introduce], [phone], [province],[path], [city], [address] FROM [T_Library]"></asp:SqlDataSource>
 
                </div>
 
@@ -261,7 +261,7 @@
 
             <div class="bookrank hidden-sm hidden-xs hidden-md col-lg-2">
                 <div class="rankz">
-                     <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="ebookID" DataSourceID="SqlDataSource1" BorderStyle="None" CellPadding="4" ForeColor="#333333" GridLines="None" Height="279px" AllowCustomPaging="True" Width="152px" AllowPaging="True">
+                     <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="ebookID" DataSourceID="SqlDataSource3" BorderStyle="None" CellPadding="4" ForeColor="#333333" GridLines="None" Height="279px" AllowCustomPaging="True" Width="152px" AllowPaging="True">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:TemplateField HeaderText="下载排行榜" InsertVisible="false" >
@@ -289,7 +289,7 @@
                 </div>
 
                 <div class="rankr">
-                     <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="bookID" DataSourceID="SqlDataSource2" BorderStyle="None" CellPadding="4" ForeColor="#333333" GridLines="None" Height="279px" AllowCustomPaging="True" Width="152px" AllowPaging="True">
+                     <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="bookID" DataSourceID="SqlDataSource4" BorderStyle="None" CellPadding="4" ForeColor="#333333" GridLines="None" Height="279px" AllowCustomPaging="True" Width="152px" AllowPaging="True">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
               <Columns>
                   <asp:TemplateField HeaderText="阅读排行榜">
