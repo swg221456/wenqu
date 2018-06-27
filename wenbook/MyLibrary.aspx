@@ -261,35 +261,58 @@
 
             <div class="bookrank hidden-sm hidden-xs hidden-md col-lg-2">
                 <div class="rankz">
-                    <h4>下载排行</h4>
-                    <ol>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                    </ol>
+                     <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="ebookID" DataSourceID="SqlDataSource1" BorderStyle="None" CellPadding="4" ForeColor="#333333" GridLines="None" Height="279px" AllowCustomPaging="True" Width="152px" AllowPaging="True">
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <Columns>
+                <asp:TemplateField HeaderText="下载排行榜" InsertVisible="false" >
+                    <ItemTemplate>
+                        <%# Container.DataItemIndex + 1 %>.
+                        <a href="#"><asp:Label ID="Label1" runat="server" Text='<%# Eval("ebookName") %>'></asp:Label></a>
+                    </ItemTemplate>
+                    
+                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" CssClass="ps_item" />
+                </asp:TemplateField>
+            </Columns>
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:AqueductConnectionString %>" SelectCommand="SELECT * FROM [T_Ebook] ORDER BY [viewTimes]"></asp:SqlDataSource>
+
                 </div>
 
                 <div class="rankr">
-                    <h4>阅读排行</h4>
-                    <ol>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                        <li><a href="#">书名</a></li>
-                    </ol>
+                     <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="bookID" DataSourceID="SqlDataSource2" BorderStyle="None" CellPadding="4" ForeColor="#333333" GridLines="None" Height="279px" AllowCustomPaging="True" Width="152px" AllowPaging="True">
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+              <Columns>
+                  <asp:TemplateField HeaderText="阅读排行榜">
+                      <ItemTemplate>
+                           <%# Container.DataItemIndex + 1 %>.
+                          <a href="#"><asp:Label ID="Label2" runat="server" Text='<%# Eval("bookName") %>'></asp:Label></a>
+                      </ItemTemplate>
+                      <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" CssClass="ps_item" />
+                  </asp:TemplateField>
+              </Columns>
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:AqueductConnectionString %>" SelectCommand="SELECT * FROM [T_Book] ORDER BY [borrowTimes]"></asp:SqlDataSource>
+
                 </div>
 
                 

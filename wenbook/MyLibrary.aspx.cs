@@ -24,7 +24,7 @@ namespace wenbook
 
             string cmdText = "select * from T_Library where province like  @province";
             string[] paramList = { "@province" };
-            object[] valueList = { };
+            object[] valueList = {this.provi.Text };
 
 
 
