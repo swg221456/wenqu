@@ -152,49 +152,49 @@
                 <p class="title-n">男生分类</p>
                     <div class="clstext">
                     <img src="image/210.jpg" alt="Image">  
-                    <span><a href="#">都市传奇</a></span>
+                    <span><a href="BookCity.aspx">都市传奇</a></span>
 
                     </div>
 
                     <div class="clstext">
                         <img src="image/211.jpg" alt="Image">  
-                        <span><a href="#">玄幻</a></span>
+                        <span><a href="BookCity.aspx">玄幻</a></span>
 
                     </div>
 
                     <div class="clstext">
                         <img src="image/212.jpg" alt="Image">  
-                        <span><a href="#">仙侠修真</a></span>
+                        <span><a href="BookCity.aspx">仙侠修真</a></span>
 
                     </div>
                     
                     <div class="clstext">
                         <img src="image/213.jpg" alt="Image">  
-                        <span><a href="#">灵异</a></span>
+                        <span><a href="BookCity.aspx">灵异</a></span>
 
                     </div>
 
                     <div class="clstext">
                     <img src="image/214.jpg" alt="Image">  
-                    <span><a href="#">历史</a></span>
+                    <span><a href="BookCity.aspx">历史</a></span>
 
                     </div>
 
                     <div class="clstext">
                     <img src="image/215.jpg" alt="Image">  
-                    <span><a href="#">游戏竞技</a></span>
+                    <span><a href="BookCity.aspx">游戏竞技</a></span>
 
                     </div>
 
                     <div class="clstext">
                     <img src="image/216.jpg" alt="Image">  
-                    <span><a href="#">科幻</a></span>
+                    <span><a href="BookCity.aspx">科幻</a></span>
 
                     </div>
 
                     <div class="clstext">
                     <img src="image/217.jpg" alt="Image">  
-                    <span><a href="#">武侠</a></span>
+                    <span><a href="BookCity.aspx">武侠</a></span>
 
                     </div>
 
@@ -206,32 +206,32 @@
 
                     <div class="clstext">
                     <img src="image/219.jpg" alt="Image">  
-                    <span><a href="#">其他</a></span>
+                    <span><a href="BookCity.aspx">其他</a></span>
 
                     </div>
                     <p class="title-n">女生分类</p>
 
                     <div class="clstext">
                     <img src="image/201.jpg" alt="Image">  
-                    <span><a href="#">古代言情</a></span>
+                    <span><a href="BookCity.aspx">古代言情</a></span>
 
                     </div>
 
                     <div class="clstext">
                     <img src="image/202.jpg" alt="Image">  
-                    <span><a href="#">现代言情</a></span>
+                    <span><a href="BookCity.aspx">现代言情</a></span>
 
                     </div>
 
                     <div class="clstext">
                     <img src="image/203.jpg" alt="Image">  
-                    <span><a href="#">玄幻言情</a></span>
+                    <span><a href="BookCity.aspx">玄幻言情</a></span>
 
                     </div>
 
                     <div class="clstext">
                     <img src="image/204.jpg" alt="Image">   
-                    <span><a href="#" >浪漫青春</a></span>
+                    <span><a href="BookCity.aspx" >浪漫青春</a></span>
 
                     </div>
 
@@ -567,9 +567,9 @@
                 <asp:TemplateField HeaderText="热搜榜">
                     <ItemTemplate>
                         <div class="ddw">
-                        <a href="#"><asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" /></a>
+                        <a href="BookMessage.aspx"><asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" /></a>
                         
-                        <a href="#"><asp:Label ID="libname" runat="server" CssClass="libnametext" Text='<%# Eval("ebookName") %>'></asp:Label></a>
+                        <a href="BookMessage.aspx"><asp:Label ID="libname" runat="server" CssClass="libnametext" Text='<%# Eval("ebookName") %>'></asp:Label></a>
                             <br />
                         <asp:Label ID="libinth" runat="server" CssClass="libintext" Text='<%# Eval("author") %>'></asp:Label>
                             <br />
@@ -600,47 +600,47 @@
                 <div class="piccs hidden-xs">
             <div class="picsty">
                 <asp:Image ID="Image2" CssClass="picsty a1" ImageUrl="~/image/n1.jpg" runat="server" />
-                <a href="#" class="a2"><p>玄幻</p></a>
+                <a href="BookCity.aspx" class="a2"><p>玄幻</p></a>
             </div>
             <div class="picsty">
                 <asp:Image ID="Image3" CssClass="picsty a1" ImageUrl="~/image/n2.jpg" runat="server" />
-                <a href="#"  class="a2"><p>都市传奇</p></a>
+                <a href="BookCity.aspx"  class="a2"><p>都市传奇</p></a>
             </div>
             <div class="picsty">
                 <asp:Image ID="Image4" CssClass="picsty a1" ImageUrl="~/image/n3.jpg" runat="server" />
-                <a href="#"  class="a2"><p>历史</p></a>
+                <a href="BookCity.aspx"  class="a2"><p>历史</p></a>
             </div>
             <div class="picsty">
                 <asp:Image ID="Image5" CssClass="picsty a1" ImageUrl="~/image/n4.jpg" runat="server" />
-                <a href="#"  class="a2"><p>悬疑</p></a>
+                <a href="BookCity.aspx"  class="a2"><p>悬疑</p></a>
             </div>
             <div class="picsty">
                 <asp:Image ID="Image6" CssClass="picsty a1" ImageUrl="~/image/n5.jpg" runat="server" />
-                <a href="#"  class="a2"><p>科幻</p></a>
+                <a href="BookCity.aspx"  class="a2"><p>科幻</p></a>
             </div>
             <div class="picsty">
                 <asp:Image ID="Image7" CssClass="picsty a1" ImageUrl="~/image/n6.jpg" runat="server" />
-                <a href="#"  class="a2"><p>玄幻言情</p></a>
+                <a href="BookCity.aspx"  class="a2"><p>玄幻言情</p></a>
             </div>
             
             <div class="picqs">
                 <asp:Image ID="Image8" CssClass="picqs" ImageUrl="~/image/n9.jpg" runat="server" />
-                <a href="#"  class="aa1"><p>浪漫青春</p></a>
+                <a href="BookCity.aspx"  class="aa1"><p>浪漫青春</p></a>
             </div>
 
             <div class="picas">
                 <asp:Image ID="Image9" CssClass="picas" ImageUrl="~/image/n7.jpg" runat="server" />
-                <a href="#"  class="aa2"><p>古代言情</p></a>
+                <a href="BookCity.aspx"  class="aa2"><p>古代言情</p></a>
             </div>
 
             <div class="picsty p10">
                 <asp:Image ID="Image10" CssClass="picsty a1" ImageUrl="~/image/n8.jpg" runat="server"/>
-                <a href="#"  class="a2"><p>现代言情</p></a>
+                <a href="BookCity.aspx"  class="a2"><p>现代言情</p></a>
             </div>
 
              <div class="picsty p11">
                 <asp:Image ID="Image11" CssClass="picsty a1" ImageUrl="~/image/n10.jpg" runat="server"/>
-                <a href="#"  class="a2"><p>玄幻灵异</p></a>
+                <a href="BookCity.aspx"  class="a2"><p>玄幻灵异</p></a>
             </div>
 
         </div>
@@ -653,16 +653,16 @@
                         <h4>玄幻</h4>
                         <hr class="hrcs"/>
                         <ol>
-                            <li><a href="#">至尊神阳</a></li>
-                            <li><a href="#">寒帝</a></li>
-                            <li><a href="#">诛神记</a></li>
-                            <li><a href="#">佛系按摩馆</a></li>
-                            <li><a href="#">绝世战尊</a></li>
-                            <li><a href="#">武陵帝尊</a></li>
-                            <li><a href="#">逆天狂魔系统</a></li>
-                            <li><a href="#">绝世神魂</a></li>
-                            <li><a href="#">吞噬诸天</a></li>
-                            <li><a href="#">无上战帝</a></li>
+                            <li><a href="BookCity.aspx">至尊神阳</a></li>
+                            <li><a href="BookCity.aspx">寒帝</a></li>
+                            <li><a href="BookCity.aspx">诛神记</a></li>
+                            <li><a href="BookCity.aspx">佛系按摩馆</a></li>
+                            <li><a href="BookCity.aspx">绝世战尊</a></li>
+                            <li><a href="BookCity.aspx">武陵帝尊</a></li>
+                            <li><a href="BookCity.aspx">逆天狂魔系统</a></li>
+                            <li><a href="BookCity.aspx">绝世神魂</a></li>
+                            <li><a href="BookCity.aspx">吞噬诸天</a></li>
+                            <li><a href="BookCity.aspx">无上战帝</a></li>
                         </ol>
 
                         <a><p>更多</p></a>
@@ -672,16 +672,16 @@
                         <h4>都市传奇</h4>
                         <hr class="hrcs"/>
                         <ol>
-                            <li><a href="#">变身国宝熊猫</a></li>
-                            <li><a href="#">极品天医</a></li>
-                            <li><a href="#">妖孽强者席卷都市</a></li>
-                            <li><a href="#">重生之雷霆暴君</a></li>
-                            <li><a href="#">村野小丹神</a></li>
-                            <li><a href="#">都市兵峰</a></li>
-                            <li><a href="#">绝品兵王</a></li>
-                            <li><a href="#">史上最贱保镖</a></li>
-                            <li><a href="#">全职护花高手</a></li>
-                            <li><a href="#">都市极品改造系统</a></li>
+                            <li><a href="BookCity.aspx">变身国宝熊猫</a></li>
+                            <li><a href="BookCity.aspx">极品天医</a></li>
+                            <li><a href="BookCity.aspx">妖孽强者席卷都市</a></li>
+                            <li><a href="BookCity.aspx">重生之雷霆暴君</a></li>
+                            <li><a href="BookCity.aspx">村野小丹神</a></li>
+                            <li><a href="BookCity.aspx">都市兵峰</a></li>
+                            <li><a href="BookCity.aspx">绝品兵王</a></li>
+                            <li><a href="BookCity.aspx">史上最贱保镖</a></li>
+                            <li><a href="BookCity.aspx">全职护花高手</a></li>
+                            <li><a href="BookCity.aspx">都市极品改造系统</a></li>
                         </ol>
                         <a><p>更多</p></a>
                     </div>
@@ -690,16 +690,16 @@
                         <h4>仙侠修真</h4>
                         <hr class="hrcs"/>
                         <ol>
-                            <li><a href="#">九婴魔界</a></li>
-                            <li><a href="#">玄祖</a></li>
-                            <li><a href="#">万界星河</a></li>
-                            <li><a href="#">戏命九霄</a></li>
-                            <li><a href="#">九龙诀</a></li>
-                            <li><a href="#">吞天</a></li>
-                            <li><a href="#">荒古逆</a></li>
-                            <li><a href="#">仙凡决</a></li>
-                            <li><a href="#">绝世幽仙</a></li>
-                            <li><a href="#">锁天脉</a></li>
+                            <li><a href="BookCity.aspx">九婴魔界</a></li>
+                            <li><a href="BookCity.aspx">玄祖</a></li>
+                            <li><a href="BookCity.aspx">万界星河</a></li>
+                            <li><a href="BookCity.aspx">戏命九霄</a></li>
+                            <li><a href="BookCity.aspx">九龙诀</a></li>
+                            <li><a href="BookCity.aspx">吞天</a></li>
+                            <li><a href="BookCity.aspx">荒古逆</a></li>
+                            <li><a href="BookCity.aspx">仙凡决</a></li>
+                            <li><a href="BookCity.aspx">绝世幽仙</a></li>
+                            <li><a href="BookCity.aspx">锁天脉</a></li>
                         </ol>
                         <a><p>更多</p></a>
                     </div>
@@ -708,16 +708,16 @@
                         <h4>游戏竞技</h4>
                         <hr class="hrcs"/>
                         <ol>
-                            <li><a href="#">网游之纵横</a></li>
-                            <li><a href="#">荣耀战迹</a></li>
-                            <li><a href="#">英雄联盟之谁与争锋</a></li>
-                            <li><a href="#">大航海时代</a></li>
-                            <li><a href="#">我是职业选手</a></li>
-                            <li><a href="#">最强系统之瓦罗兰重生</a></li>
-                            <li><a href="#">全职高手</a></li>
-                            <li><a href="#">我的游戏空间</a></li>
-                            <li><a href="#">英魂之刃</a></li>
-                            <li><a href="#">荒梦猎人</a></li>
+                            <li><a href="BookCity.aspx">网游之纵横</a></li>
+                            <li><a href="BookCity.aspx">荣耀战迹</a></li>
+                            <li><a href="BookCity.aspx">英雄联盟之谁与争锋</a></li>
+                            <li><a href="BookCity.aspx">大航海时代</a></li>
+                            <li><a href="BookCity.aspx">我是职业选手</a></li>
+                            <li><a href="BookCity.aspx">最强系统之瓦罗兰重生</a></li>
+                            <li><a href="BookCity.aspx">全职高手</a></li>
+                            <li><a href="BookCity.aspx">我的游戏空间</a></li>
+                            <li><a href="BookCity.aspx">英魂之刃</a></li>
+                            <li><a href="BookCity.aspx">荒梦猎人</a></li>
                         </ol>
                         <a><p>更多</p></a>
                     </div>
@@ -727,16 +727,16 @@
                         <h4>古代言情</h4>
                         <hr class="hrcs"/>
                         <ol>
-                            <li><a href="#">明宫第一媳</a></li>
-                            <li><a href="#">盛世贤妃</a></li>
-                            <li><a href="#">绝色驸马，乖乖就擒</a></li>
-                            <li><a href="#">王爷尽然想休妻</a></li>
-                            <li><a href="#">重生之江山旧人仇</a></li>
-                            <li><a href="#">嫡女在上</a></li>
-                            <li><a href="#">贴身丫鬟要爬床</a></li>
-                            <li><a href="#">凤主沉浮，废后倾城</a></li>
-                            <li><a href="#">重生之卿本惊华</a></li>
-                            <li><a href="#">一品狂妃</a></li>
+                            <li><a href="BookCity.aspx">明宫第一媳</a></li>
+                            <li><a href="BookCity.aspx">盛世贤妃</a></li>
+                            <li><a href="BookCity.aspx">绝色驸马，乖乖就擒</a></li>
+                            <li><a href="BookCity.aspx">王爷尽然想休妻</a></li>
+                            <li><a href="BookCity.aspx">重生之江山旧人仇</a></li>
+                            <li><a href="BookCity.aspx">嫡女在上</a></li>
+                            <li><a href="BookCity.aspx">贴身丫鬟要爬床</a></li>
+                            <li><a href="BookCity.aspx">凤主沉浮，废后倾城</a></li>
+                            <li><a href="BookCity.aspx">重生之卿本惊华</a></li>
+                            <li><a href="BookCity.aspx">一品狂妃</a></li>
                         </ol>
 
                         <a><p>更多</p></a>
@@ -746,16 +746,16 @@
                         <h4>浪漫青春</h4>
                         <hr class="hrcs"/>
                         <ol>
-                            <li><a href="#">论戏精的自我修养</a></li>
-                            <li><a href="#">爷就是痞，怎么着</a></li>
-                            <li><a href="#">我拿时光换回爱</a></li>
-                            <li><a href="#">听说，我是你的可爱多</a></li>
-                            <li><a href="#">她拉下了女装大佬的裙子</a></li>
-                            <li><a href="#">最萌颜值差</a></li>
-                            <li><a href="#">闺蜜在左爱人在右</a></li>
-                            <li><a href="#">这世间最美好的相遇</a></li>
-                            <li><a href="#">重回少年时代</a></li>
-                            <li><a href="#">那年时光悠悠</a></li>
+                            <li><a href="BookCity.aspx">论戏精的自我修养</a></li>
+                            <li><a href="BookCity.aspx">爷就是痞，怎么着</a></li>
+                            <li><a href="BookCity.aspx">我拿时光换回爱</a></li>
+                            <li><a href="BookCity.aspx">听说，我是你的可爱多</a></li>
+                            <li><a href="BookCity.aspx">她拉下了女装大佬的裙子</a></li>
+                            <li><a href="BookCity.aspx">最萌颜值差</a></li>
+                            <li><a href="BookCity.aspx">闺蜜在左爱人在右</a></li>
+                            <li><a href="BookCity.aspx">这世间最美好的相遇</a></li>
+                            <li><a href="BookCity.aspx">重回少年时代</a></li>
+                            <li><a href="BookCity.aspx">那年时光悠悠</a></li>
                         </ol>
                         <a><p>更多</p></a>
                     </div>
@@ -764,16 +764,16 @@
                         <h4>玄幻言情</h4>
                         <hr class="hrcs"/>
                         <ol>
-                            <li><a href="#">偃师传说</a></li>
-                            <li><a href="#">徒弟，你竟然是魔尊</a></li>
-                            <li><a href="#">废材狂妃：极品幻灵师</a></li>
-                            <li><a href="#">国师大人请自重</a></li>
-                            <li><a href="#">帝君，让我咬一口</a></li>
-                            <li><a href="#">救命！我变成了一棵草</a></li>
-                            <li><a href="#">重生小狐仙</a></li>
-                            <li><a href="#">妖物大人，玩物新娘</a></li>
-                            <li><a href="#">反派，我才是主角他娘</a></li>
-                            <li><a href="#">邪凤涅槃</a></li>
+                            <li><a href="BookCity.aspx">偃师传说</a></li>
+                            <li><a href="BookCity.aspx">徒弟，你竟然是魔尊</a></li>
+                            <li><a href="BookCity.aspx">废材狂妃：极品幻灵师</a></li>
+                            <li><a href="BookCity.aspx">国师大人请自重</a></li>
+                            <li><a href="BookCity.aspx">帝君，让我咬一口</a></li>
+                            <li><a href="BookCity.aspx">救命！我变成了一棵草</a></li>
+                            <li><a href="BookCity.aspx">重生小狐仙</a></li>
+                            <li><a href="BookCity.aspx">妖物大人，玩物新娘</a></li>
+                            <li><a href="BookCity.aspx">反派，我才是主角他娘</a></li>
+                            <li><a href="BookCity.aspx">邪凤涅槃</a></li>
                         </ol>
                         <a><p>更多</p></a>
                     </div>
@@ -782,16 +782,16 @@
                         <h4>校园生活</h4>
                         <hr class="hrcs"/>
                         <ol>
-                            <li><a href="#">学长总是想撩我</a></li>
-                            <li><a href="#">富家子们的代班主任</a></li>
-                            <li><a href="#">那群可爱的复读生们</a></li>
-                            <li><a href="#">网恋男神在隔壁</a></li>
-                            <li><a href="#">谁的青春无巧合</a></li>
-                            <li><a href="#">我的逗比男神</a></li>
-                            <li><a href="#">同桌有毒</a></li>
-                            <li><a href="#">拐个男神谈恋爱</a></li>
-                            <li><a href="#">霸道校草追爱记</a></li>
-                            <li><a href="#">老师，你的智商掉了</a></li>
+                            <li><a href="BookCity.aspx">学长总是想撩我</a></li>
+                            <li><a href="BookCity.aspx">富家子们的代班主任</a></li>
+                            <li><a href="BookCity.aspx">那群可爱的复读生们</a></li>
+                            <li><a href="BookCity.aspx">网恋男神在隔壁</a></li>
+                            <li><a href="BookCity.aspx">谁的青春无巧合</a></li>
+                            <li><a href="BookCity.aspx">我的逗比男神</a></li>
+                            <li><a href="BookCity.aspx">同桌有毒</a></li>
+                            <li><a href="BookCity.aspx">拐个男神谈恋爱</a></li>
+                            <li><a href="BookCity.aspx">霸道校草追爱记</a></li>
+                            <li><a href="BookCity.aspx">老师，你的智商掉了</a></li>
                         </ol>
                         <a><p>更多</p></a>
                     </div>
@@ -808,7 +808,7 @@
                 <asp:TemplateField HeaderText="下载排行榜" InsertVisible="false" >
                     <ItemTemplate>
                         <%# Container.DataItemIndex + 1 %>.
-                        <a href="#"><asp:Label ID="Label1" runat="server" Text='<%# Eval("ebookName") %>'></asp:Label></a>
+                        <a href="BookCity.aspx"><asp:Label ID="Label1" runat="server" Text='<%# Eval("ebookName") %>'></asp:Label></a>
                     </ItemTemplate>
                     
                     <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" CssClass="ps_item" />
@@ -837,7 +837,7 @@
                   <asp:TemplateField HeaderText="阅读排行榜">
                       <ItemTemplate>
                            <%# Container.DataItemIndex + 1 %>.
-                          <a href="#"><asp:Label ID="Label2" runat="server" Text='<%# Eval("bookName") %>'></asp:Label></a>
+                          <a href="BookCity.aspx"><asp:Label ID="Label2" runat="server" Text='<%# Eval("bookName") %>'></asp:Label></a>
                       </ItemTemplate>
                       <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" CssClass="ps_item" />
                   </asp:TemplateField>

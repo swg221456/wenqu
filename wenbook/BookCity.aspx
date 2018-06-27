@@ -217,7 +217,7 @@
                 <asp:TemplateField HeaderText="图书">
                     <ItemTemplate>
                         <div class="book">
-                        <a href="#"><asp:Image ID="Image1" CssClass="pic1" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' runat="server" /></a>
+                        <a href="BookMessage.aspx" <%# Session["name"] = Eval("bookName") %> <%# Session["type"] = "b" %>><asp:Image ID="Image1" CssClass="pic1" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' runat="server" /></a>
                         <asp:Label ID="Label1" runat="server" CssClass="bookna" Text='<%# Eval("bookName") %>'></asp:Label>
                         <br />
                         <asp:Label ID="Label2" runat="server" CssClass="bookin" Text='<%# Eval("author") %>'></asp:Label>
@@ -236,10 +236,10 @@
                 <asp:TemplateField HeaderText="电子书">
                     <ItemTemplate>
                         <div class="book">
-                        <a href="#"><asp:Image ID="Image2" CssClass="pic1" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' runat="server" /></a>
-                        <asp:Label ID="Label5" CssClass="bookna" runat="server" Text='<%# Eval("ebookName") %>'></asp:Label>
+                        <a href="BookMessage.aspx" onclick='<%# Session["name"] = GridView2.SelectedInd  Eval("ebookName") %> <%# Session["type"] = "e" %>' ><asp:Image ID="Image2" CssClass="pic1" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' runat="server" /></a>
+                        <asp:Label ID="textName" CssClass="bookna" runat="server" Text='<%# Eval("ebookName") %>'></asp:Label>
                             <br />
-                        <asp:Label ID="Label6" CssClass="bookin" runat="server" Text='<%# Eval("author") %>'></asp:Label>
+                        <asp:Label ID="Label6"  CssClass="bookin" runat="server" Text='<%# Eval("author") %>'></asp:Label>
                         <asp:Label ID="Label7" CssClass="bookty" runat="server" Text='<%# Eval("type") %>'></asp:Label>
                         <asp:Label ID="Label8" CssClass="booktro" runat="server" Text='<%# Eval("introduce") %>'></asp:Label>
                         </div>
@@ -272,7 +272,7 @@
     </div>
 
     <div class="bottomdiv">
-        <p class="bottext"><asp:Label ID="Label6" runat="server" Text="关于我们 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label3" runat="server" Text=" 联系我们 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label4" runat="server" Text=" 投稿声明 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label5" runat="server" Text=" 版权声明"></asp:Label></p>
+        <p class="bottext"><asp:Label ID="Label6" runat="server" Text="关于我们 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label3" runat="server" Text=" 联系我们 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label4" runat="server" Text=" 投稿声明 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label55" runat="server" Text=" 版权声明"></asp:Label></p>
         <p class="bottext">有问题请联系客服人员。</p>
                 
     </div>
