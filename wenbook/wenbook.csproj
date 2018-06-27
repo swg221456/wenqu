@@ -200,6 +200,9 @@
     <Content Include="js\jquery.js" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="UploadPic\asd2.jpg" />
+    <Content Include="UploadPic\bbq2.jpg" />
+    <Content Include="UploadPic\qqw.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -262,7 +265,6 @@
   <ItemGroup>
     <Folder Include="book\" />
     <Folder Include="Etext\" />
-    <Folder Include="UploadPic\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
