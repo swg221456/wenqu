@@ -70,11 +70,11 @@
             <div class="navdiv">
                     
                     <ul class="nav nav-pills navtext">
-                           <li class="active"><a href="index">首页</a></li>
-                            <li class=" hidden-xs"><a href="BookCity">书城</a></li>
-                            <li><a href="MyLirary">图书馆</a></li>
+                            <li class="active"><a href="index.aspx">首页</a></li>
+                            <li class=" hidden-xs"><a href="BookCity.aspx">书城</a></li>
+                            <li><a href="MyLibrary.aspx">图书馆</a></li>
                             <li class=" hidden-xs" ><a href="#">书架</a></li>
-                            <li class=" hidden-xs" ><a href="FileUpload">信息管理</a></li>
+                            <li class=" hidden-xs" ><a href="FileUpload.aspx">信息管理</a></li>
                           </ul>
             
                 

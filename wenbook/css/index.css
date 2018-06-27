@@ -326,6 +326,7 @@ a:hover{
 }
 
 .bottomdiv p{
+    padding-top:100px;
     font-size: 12px;
     color: darkgray;
 }
@@ -333,11 +334,10 @@ a:hover{
 
 
  .piccs {
+      
             width:800px;
             height:600px;
-            
-
-        }
+   }
 
         
 
