@@ -19,13 +19,12 @@ namespace wenbook
         SQLHelper db = new SQLHelper();
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
 
             SqlConnection coon = new SqlConnection();
 
             string cmdText = "select * from T_Library where province like  @province";
             string[] paramList = { "@province" };
-            object[] valueList = { this.provi.Text.Trim() };
+            object[] valueList = { };
 
 
 
@@ -36,6 +35,10 @@ namespace wenbook
 
             GridView2.DataSource = da;
             GridView2.DataBind();
+
+
+
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)

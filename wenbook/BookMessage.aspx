@@ -114,11 +114,11 @@
             <div class="navdiv">
                     
                     <ul class="nav nav-pills navtext">
-                            <li class="active"><a href="#">首页</a></li>
-                            <li class=" hidden-xs"><a href="#">书城</a></li>
-                            <li><a href="#">图书馆</a></li>
+                           <li class="active"><a href="index">首页</a></li>
+                            <li class=" hidden-xs"><a href="BookCity">书城</a></li>
+                            <li><a href="MyLirary">图书馆</a></li>
                             <li class=" hidden-xs" ><a href="#">书架</a></li>
-                            <li class=" hidden-xs" ><a href="#">信息管理</a></li>
+                            <li class=" hidden-xs" ><a href="FileUpload">信息管理</a></li>
                             
                           </ul>
             

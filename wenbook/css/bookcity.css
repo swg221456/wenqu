@@ -1,7 +1,7 @@
 ﻿.topcs{
     margin-top:0px;
     width:100%;
-    height:400px;
+    height:500px;
     background-color:#f9f9fb;
 }
 
@@ -18,16 +18,18 @@
 .btn4 {
     font-size:16px;
     height:40px;
-    width:100px;
+    width:90px;
     margin-left:30px;
 }
+
+
 
 
 
 .btn2 {
     font-size:16px;
     height:40px;
-    width:60px;
+    width:50px;
     margin-left:30px;
 }
 
@@ -51,3 +53,63 @@ a:hover{
     color:red;
 }
 
+.bookdiv {
+    width:100%;
+    height:600px;
+    background-color:antiquewhite;
+}
+
+ .cc {
+            position:absolute;
+            bottom:0px;
+            height:100px;
+            width:100%;
+            background-color:beige;
+
+        }
+        .pic1 {
+            width:30%;
+            height:100px;
+            float:left;
+        }
+
+        .bookna {
+            padding-left:20px;
+            text-indent: 2em;
+           
+            font-size:16px;
+        }
+
+        .bookin {
+            text-indent: 2em;
+            color:gainsboro;
+            font-size:14px;
+        }
+
+        .bookty {
+            color:gainsboro;
+            font-size:14px;
+        }
+
+        .booktro {
+            color:gainsboro;
+            font-size:14px;
+            text-indent: 2em;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+        }
+
+        .book {
+            margin-top:40px;
+        }
+
+        .grid1 {
+            float:left;
+        }
+
+        .grid2 {
+            float:left;
+        }
