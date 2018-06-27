@@ -134,7 +134,7 @@
                         <asp:Label ID="smtype" runat="server" Text="异常"></asp:Label></span>&nbsp;>&nbsp;<span class="c1"><asp:Label ID="smname" runat="server" Text="异常"></asp:Label></span>
                     <br />
 
-                    <asp:Image ID="Image1" CssClass="bookpic" ImageUrl='<%#"~/image/" +Session["name"].ToString()   %>' runat="server" />
+                    <asp:Image ID="Image1" CssClass="bookpic" ImageUrl='<%#"~/Uploadpic/" +Eval("path") %>' runat="server" />
                      
                     <h2 class="textname c1"><asp:Label CssClass="textname" ID="name" runat="server" Text="异常"></asp:Label></h2>
                     <p class="intext"><asp:Label ID="inth" runat="server" Text="异常"></asp:Label></p>

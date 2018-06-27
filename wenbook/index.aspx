@@ -567,7 +567,7 @@
                 <asp:TemplateField HeaderText="热搜榜">
                     <ItemTemplate>
                         <div class="ddw">
-                        <a href="#"><asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/image/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" /></a>
+                        <a href="#"><asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" /></a>
                         
                         <a href="#"><asp:Label ID="libname" runat="server" CssClass="libnametext" Text='<%# Eval("ebookName") %>'></asp:Label></a>
                             <br />

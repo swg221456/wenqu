@@ -180,7 +180,7 @@
                 <asp:TemplateField>
                     <ItemTemplate>
                         <div>
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/Uploadpic/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" />
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" />
                         
                         <asp:Label ID="libname" runat="server" CssClass="libnametext" Text='<%# Eval("libName") %>'></asp:Label>
                             <br />

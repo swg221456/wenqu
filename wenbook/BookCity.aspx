@@ -217,7 +217,7 @@
                 <asp:TemplateField HeaderText="图书">
                     <ItemTemplate>
                         <div class="book">
-                        <a href="#"><asp:Image ID="Image1" CssClass="pic1" ImageUrl="~/image/pic1.jpg" runat="server" /></a>
+                        <a href="#"><asp:Image ID="Image1" CssClass="pic1" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' runat="server" /></a>
                         <asp:Label ID="Label1" runat="server" CssClass="bookna" Text='<%# Eval("bookName") %>'></asp:Label>
                         <br />
                         <asp:Label ID="Label2" runat="server" CssClass="bookin" Text='<%# Eval("author") %>'></asp:Label>
@@ -236,7 +236,7 @@
                 <asp:TemplateField HeaderText="电子书">
                     <ItemTemplate>
                         <div class="book">
-                        <a href="#"><asp:Image ID="Image2" CssClass="pic1" ImageUrl="~/image/14.png" runat="server" /></a>
+                        <a href="#"><asp:Image ID="Image2" CssClass="pic1" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' runat="server" /></a>
                         <asp:Label ID="Label5" CssClass="bookna" runat="server" Text='<%# Eval("ebookName") %>'></asp:Label>
                             <br />
                         <asp:Label ID="Label6" CssClass="bookin" runat="server" Text='<%# Eval("author") %>'></asp:Label>

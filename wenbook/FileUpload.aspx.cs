@@ -44,7 +44,7 @@ namespace wenbook
                 {
                     try
                     {
-                        this.Image1.ImageUrl = "~/image/" + FileUpload1.FileName;
+                        this.Image1.ImageUrl = "~/UploadPic/" + FileUpload1.FileName;
                         
 
                         string path = this.FileUpload1.PostedFile.FileName;
@@ -99,7 +99,7 @@ namespace wenbook
                 {
                     try
                     {
-                        this.Image2.ImageUrl = "~/image/" + FileUpload2.FileName;
+                        this.Image2.ImageUrl = "~/UploadPic/" + FileUpload2.FileName;
 
                         string picpath = this.FileUpload2.PostedFile.FileName;
                         string path = this.FileUpload3.PostedFile.FileName;
@@ -153,7 +153,7 @@ namespace wenbook
             UpBook lg = new UpBook(this.bookName.Text,this.author.Text,this.intrduce.Text,type, this.maxcount.Text,this.usablecount.Text,lbg.path,picpath);
             OperationResult bp = bll.Registbook(lg);
 
-            this.Image3.ImageUrl = "~/image/" + FileUpload4.FileName;
+            this.Image3.ImageUrl = "~/UploadPic/" + FileUpload4.FileName;
 
 
             if (bp.ToString() == "exist")
