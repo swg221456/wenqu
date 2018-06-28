@@ -14,7 +14,12 @@ namespace wenbook
         SQLHelper db = new SQLHelper();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user"] != null)
+            if (this.Session["user"]== null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+                if (Session["user"] != null)
             {
                 string name = Session["user"].ToString();
 

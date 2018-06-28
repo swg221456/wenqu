@@ -16,6 +16,10 @@ namespace wenbook
         FileUploadBll bll = new FileUploadBll();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (this.Session["user"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             string[] List = { "都市传奇", "玄幻", "仙侠修真", "灵异", "历史", "游戏竞技", "科幻", "武侠", "奇幻", "古代言情", "现代言情", "玄幻言情", "校园生活", "其他" };
             for (int i = 1; i <List.Length; i++)
             {
