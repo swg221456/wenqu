@@ -26,6 +26,7 @@ namespace wenbook
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            if (Session["user"] != null) { 
             bool fileVaild = false;
             if (this.FileUpload1.HasFile)
             {
@@ -40,39 +41,47 @@ namespace wenbook
                     }
                 }
 
-                if (fileVaild == true)
-                {
-                    try
+                    if (fileVaild == true)
                     {
-                        this.Image1.ImageUrl = "~/UploadPic/" + FileUpload1.FileName;
-                        
-
-                        string path = this.FileUpload1.PostedFile.FileName;
-                        
-
-                        FileUploadInfo info = new FileUploadInfo(this.libname.Text, this.lobintr.Text, this.libphone.Text, this.lobpro.Text, this.lobcty.Text, this.adree.Text,path);
-                        
-
-                        OperationResult op = bll.Registlib(info);
-                        if (op.ToString() == "exist")
+                        try
                         {
-                            this.Label4.Text = "记录已存在";
+                            this.Image1.ImageUrl = "~/UploadPic/" + FileUpload1.FileName;
+
+
+                            string path = this.FileUpload1.PostedFile.FileName;
+
+
+                            FileUploadInfo info = new FileUploadInfo(this.libname.Text, this.lobintr.Text, this.libphone.Text, this.lobpro.Text, this.lobcty.Text, this.adree.Text, path);
+
+
+                            OperationResult op = bll.Registlib(info);
+                            if (op.ToString() == "exist")
+                            {
+                                this.Label4.Text = "记录已存在";
+                            }
+                            else if (op.ToString() == "success")
+                            {
+                                this.Label4.Text = "成功";
+                                string user = Session["user"].ToString();
+                                string text = user.ToString() + "上传图书馆信息：" + this.libname.Text;
+                                daysInfo da = new daysInfo(user, DateTime.Now.ToLocalTime().ToString(),text);
+                                commentBll bal = new commentBll();
+                                OperationResult ob = bal.Registday(da);
+                                
+
+                                    this.FileUpload1.SaveAs(Server.MapPath("~/UploadPic/") + FileUpload1.FileName);
+                            }
+                            else
+                            {
+                                this.Label4.Text = "意外";
+                            }
+
+
                         }
-                        else if (op.ToString() == "success")
+                        catch
                         {
-                            this.Label4.Text = "成功";
-                            this.FileUpload1.SaveAs(Server.MapPath("~/UploadPic/") + FileUpload1.FileName);
+
                         }
-                        else
-                        {
-                            this.Label4.Text = "意外";
-                        }
-
-
-                    }
-                    catch
-                    {
-
                     }
                 }
             }
@@ -118,9 +127,13 @@ namespace wenbook
                             }
                             else if (bp.ToString() == "success")
                             {
+                            string user = Session["user"].ToString();
+                            string text = user.ToString() + "上传电子书信息：" + this.EbookName.Text;
+                            daysInfo da = new daysInfo(user, DateTime.Now.ToLocalTime().ToString(), text);
+                            commentBll bal = new commentBll();
+                            OperationResult ob = bal.Registday(da);
 
-                               
-                                this.FileUpload2.SaveAs(Server.MapPath("~/UploadPic/") + FileUpload2.FileName);
+                            this.FileUpload2.SaveAs(Server.MapPath("~/UploadPic/") + FileUpload2.FileName);
                             this.FileUpload3.SaveAs(Server.MapPath("~/Etext/") + FileUpload3.FileName);
                             this.ebooktishi.Text = "成功.";
 
@@ -162,6 +175,12 @@ namespace wenbook
             }
             else if (bp.ToString() == "success")
             {
+
+                string user = Session["user"].ToString();
+                string text = user.ToString() + "上传图书信息：" + this.bookName.Text;
+                daysInfo da = new daysInfo(user, DateTime.Now.ToLocalTime().ToString(), text);
+                commentBll bal = new commentBll();
+                OperationResult ob = bal.Registday(da);
                 this.booktishi.Text = "成功.";
                 this.FileUpload4.SaveAs(Server.MapPath("~/UploadPic/") + FileUpload4.FileName);
 

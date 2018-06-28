@@ -19,5 +19,14 @@ namespace wenbook.DAL
             object[] valueList = { user.userName, user.bookName,user.type, user.reviewContent,user.time,0 };
             return db.ExecuteNoneQuery(cmdText, paramList, valueList);
         }
+
+
+        public int Addday(daysInfo user)
+        {
+            string cmdText = "insert into T_LogInfo(userName,time,logContent) values(@userName,@time,@ogContent)";
+            string[] paramList = { "@userName", "@@time","@ogContent"};
+            object[] valueList = { user.username,user.time,user.text};
+            return db.ExecuteNoneQuery(cmdText, paramList, valueList);
+        }
     }
 }

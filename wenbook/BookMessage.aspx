@@ -146,7 +146,7 @@
 
                     <asp:Button ID="Button3" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="加入书架" OnClick="Button3_Click" />
 
-                    <asp:Button ID="jieyue" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="借阅" />
+                    <asp:Button ID="jieyue" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="借阅" OnClick="jieyue_Click" />
 
 
                 </div>

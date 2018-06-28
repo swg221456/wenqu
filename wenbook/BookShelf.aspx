@@ -5,7 +5,72 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>w问渠</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jssor.slider-21.1.6.mini.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <style type="text/css">
+        .pic1 {
+            width:30%;
+            height:100px;
+            float:left;
+        }
+
+        .bookna {
+            padding-left:20px;
+            text-indent: 2em;
+           
+            font-size:16px;
+        }
+
+        .bookin {
+            text-indent: 2em;
+            color:gainsboro;
+            font-size:14px;
+        }
+
+        .bookty {
+            color:gainsboro;
+            font-size:14px;
+        }
+
+        .booktro {
+            color:gainsboro;
+            font-size:14px;
+            text-indent: 2em;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+        }
+
+        .book {
+            margin-top:40px;
+        }
+
+        .grid1 {
+            float:left;
+        }
+
+        .grid2 {
+            float:left;
+        }
+
+        .as {
+            background-color:white;
+            border:0px;
+
+        }
+
+        .dete {
+            color:red;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -179,6 +244,8 @@
                         <asp:Label ID="Label2" runat="server" CssClass="bookin" Text='<%# Eval("author") %>'></asp:Label>
                         <asp:Label ID="Label3" runat="server" CssClass="bookty" Text='<%# Eval("type") %>'></asp:Label>
                         <asp:Label ID="Label4" runat="server" CssClass="booktro" Text='<%# Eval("introduce") %>'></asp:Label>
+                            <br />
+                            <asp:Button ID="Button1" CommandArgument='<%# Eval("bookName") %>' CommandName="setID"   runat="server" CssClass="bookna as" Text="确认还书" />
                         </div>
                     </ItemTemplate>
                     <HeaderStyle BorderStyle="None" BackColor="#CCCCCC" Font-Bold="True" Font-Italic="True" Font-Size="X-Large" HorizontalAlign="Center" />
@@ -191,7 +258,7 @@
 
          <asp:GridView ID="GridView2" CssClass="grid1" runat="server" AutoGenerateColumns="False" BorderStyle="None" DataKeyNames="bookID" DataSourceID="SqlDataSource2" Width="48%" AllowPaging="True" PageSize="7" OnRowCommand="GridView1_RowCommand">
             <Columns>
-                <asp:TemplateField HeaderText="图书">
+                <asp:TemplateField HeaderText="电子书">
                     <ItemTemplate>
                         <div class="book">
                         <a href="#" ><asp:Image ID="Image1" CssClass="pic1" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' runat="server" /></a>
@@ -200,6 +267,8 @@
                         <asp:Label ID="Label2" runat="server" CssClass="bookin" Text='<%# Eval("author") %>'></asp:Label>
                         <asp:Label ID="Label3" runat="server" CssClass="bookty" Text='<%# Eval("type") %>'></asp:Label>
                         <asp:Label ID="Label4" runat="server" CssClass="booktro" Text='<%# Eval("introduce") %>'></asp:Label>
+                            <br />
+                        <asp:Button ID="Button1" runat="server"  CommandArgument='<%# Eval("bookName") %>' CommandName="setID" CssClass=" as" Text="删除" />
                         </div>
                     </ItemTemplate>
                     <HeaderStyle BorderStyle="None" BackColor="#CCCCCC" Font-Bold="True" Font-Italic="True" Font-Size="X-Large" HorizontalAlign="Center" />

@@ -259,6 +259,7 @@
     </Compile>
     <Compile Include="model\Bookinfo.cs" />
     <Compile Include="model\comment.cs" />
+    <Compile Include="model\daysInfo.cs" />
     <Compile Include="model\EbookInfo.cs" />
     <Compile Include="model\FileUploadInfo.cs" />
     <Compile Include="model\logon.cs" />

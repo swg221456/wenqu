@@ -17,7 +17,7 @@ namespace wenbook
         commentBll bal = new commentBll();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
 
             this.name.Text = Session["name"].ToString();
             this.inth.Text = Session["type"].ToString();
@@ -90,7 +90,7 @@ namespace wenbook
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            
+
             if (Session["user"] != null)
             {
                 string username = Session["user"].ToString();
@@ -99,24 +99,24 @@ namespace wenbook
 
                 string text = this.textshuru.Text;
 
-                
+
                 int type = 0;
                 if (Session["type"].ToString() == "b")
                 {
-                     type = 0;
+                    type = 0;
                 }
                 else
                 {
-                     type = 1;
-                    
+                    type = 1;
+
                 }
 
-                comment lg = new comment(username,bookname,type,text,DateTime.Now.ToLocalTime().ToString());
+                comment lg = new comment(username, bookname, type, text, DateTime.Now.ToLocalTime().ToString());
                 OperationResult op = bal.Regist(lg);
 
                 if (op.ToString() == "exist")
                 {
-                    Response.Write( "记录已存在");
+                    Response.Write("记录已存在");
                 }
                 else if (op.ToString() == "success")
                 {
@@ -150,7 +150,7 @@ namespace wenbook
                     Bookinfo book = new Bookinfo(bookname);
                     book = bbl.selectebook(book);
 
-                    Bookinfo lg = new Bookinfo(username, bookname,user.userid,book.bookid);
+                    Bookinfo lg = new Bookinfo(username, bookname, user.userid, book.bookid);
 
                     OperationResult op = bbl.Registe(lg);
 
@@ -160,6 +160,11 @@ namespace wenbook
                     }
                     else if (op.ToString() == "success")
                     {
+                        string userName = Session["user"].ToString();
+                        string text = user.ToString() + "加入书架：" + bookname;
+                        daysInfo da = new daysInfo(userName, DateTime.Now.ToLocalTime().ToString(), text);
+                        commentBll bal = new commentBll();
+                        OperationResult ob = bal.Registday(da);
                         Response.Write("成功");
                     }
 
@@ -193,6 +198,39 @@ namespace wenbook
             else
             {
 
+            }
+        }
+
+        protected void jieyue_Click(object sender, EventArgs e)
+        {
+            if (Session["user"] != null)
+            {
+                if (Session["type"].ToString() == null)
+                {
+                    string username = Session["user"].ToString();
+                    string bookname = Session["name"].ToString();
+                    Bookinfo user = new Bookinfo(username);
+                    user = bbl.selectuser(user);
+                    Bookinfo book = new Bookinfo(bookname);
+                    book = bbl.selectebook(book);
+
+                    Bookinfo lg = new Bookinfo(username, bookname, user.userid, book.bookid);
+
+                    OperationResult op = bbl.Regist(lg);
+
+                    if (op.ToString() == "exist")
+                    {
+                        Response.Write("记录已存在");
+                    }
+                    else if (op.ToString() == "success")
+                    {
+                        Response.Write("成功");
+                    }
+                }
+                else
+                {
+
+                }
             }
         }
     }

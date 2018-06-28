@@ -23,5 +23,39 @@ namespace wenbook.Bll
             }
             return OperationResult.failure;
         }
+
+
+        public OperationResult Registday(daysInfo file)
+        {
+
+            int mun = dao.Addday(file);
+            if (mun == 1)
+            {
+                return OperationResult.success;
+            }
+            return OperationResult.failure;
+        }
+
+        public OperationResult Registbook(daysInfo file)
+        {
+
+            int mun = dao.Addday(file);
+            if (mun == 1)
+            {
+                return OperationResult.success;
+            }
+            return OperationResult.failure;
+        }
+
+        public OperationResult Registebook(daysInfo file)
+        {
+
+            int mun = dao.Addday(file);
+            if (mun == 1)
+            {
+                return OperationResult.success;
+            }
+            return OperationResult.failure;
+        }
     }
 }
