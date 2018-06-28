@@ -329,11 +329,7 @@
         
     </div>
 
-    <div class="bottomdiv">
-        <p class="bottext">邱少，云董，孙总合作制作</p>
-        <p class="bottext">有问题请联系客服人员，但是我们并没有。</p>
-                
-    </div>
+    
         
 
 
