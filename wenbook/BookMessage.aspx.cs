@@ -130,5 +130,70 @@ namespace wenbook
 
             }
         }
+
+        bookshelfBll bbl = new bookshelfBll();
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            if (Session["user"] != null)
+            {
+                if (Session["type"].ToString() == null)
+                {
+
+                }
+                else if (Session["type"].ToString() == "e")
+                {
+                    string username = Session["user"].ToString();
+                    string bookname = Session["name"].ToString();
+                    Bookinfo user = new Bookinfo(username);
+                    user = bbl.selectuser(user);
+                    Bookinfo book = new Bookinfo(bookname);
+                    book = bbl.selectebook(book);
+
+                    Bookinfo lg = new Bookinfo(username, bookname,user.userid,book.bookid);
+
+                    OperationResult op = bbl.Registe(lg);
+
+                    if (op.ToString() == "exist")
+                    {
+                        Response.Write("记录已存在");
+                    }
+                    else if (op.ToString() == "success")
+                    {
+                        Response.Write("成功");
+                    }
+
+
+                }
+                else if (Session["type"].ToString() == "b")
+                {
+
+                    string username = Session["user"].ToString();
+                    string bookname = Session["name"].ToString();
+                    Bookinfo user = new Bookinfo(username);
+                    user = bbl.selectuser(user);
+                    Bookinfo book = new Bookinfo(bookname);
+                    book = bbl.selectebook(book);
+
+                    Bookinfo lg = new Bookinfo(username, bookname, user.userid, book.bookid);
+
+                    OperationResult op = bbl.Regist(lg);
+
+                    if (op.ToString() == "exist")
+                    {
+                        Response.Write("记录已存在");
+                    }
+                    else if (op.ToString() == "success")
+                    {
+                        Response.Write("成功");
+                    }
+
+                }
+            }
+            else
+            {
+
+            }
+        }
     }
 }
