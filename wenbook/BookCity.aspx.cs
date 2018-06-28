@@ -310,5 +310,31 @@ namespace wenbook
             GridView2.DataSourceID = "";
             GridView2.DataBind();
         }
+
+        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "getID")
+            {
+                
+                Button mybt = new Button();
+                mybt = (Button)e.CommandSource;
+                Session["type"] = "e";
+                Session["name"] = mybt.Text;
+                Response.Redirect("BookMessage.aspx");
+            }
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "getID")
+            {
+               
+                Button mybt = new Button();
+                mybt = (Button)e.CommandSource;
+                Session["type"] = "b";
+                Session["name"] = mybt.Text;
+                Response.Redirect("BookMessage.aspx");
+            }
+        }
     }
 }

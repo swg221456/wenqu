@@ -213,11 +213,7 @@
         
     </div>
 
-    <div class="bottomdiv">
-        <p class="bottext"><asp:Label ID="Label6" runat="server" Text="关于我们 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label3" runat="server" Text=" 联系我们 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label4" runat="server" Text=" 投稿声明 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label5" runat="server" Text=" 版权声明"></asp:Label></p>
-        <p class="bottext">有问题请联系客服人员。</p>
-                
-    </div>
+    
 
 
 

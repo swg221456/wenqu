@@ -13,5 +13,18 @@ namespace wenbook
         {
 
         }
+
+        protected void GridView3_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "getID")
+            {
+
+                Button mybt = new Button();
+                mybt = (Button)e.CommandSource;
+                Session["type"] = "e";
+                Session["name"] = mybt.Text;
+                Response.Redirect("BookMessage.aspx");
+            }
+        }
     }
 }

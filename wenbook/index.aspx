@@ -78,6 +78,12 @@
         .ddw {    
             margin-top:30px;
         }
+
+        .as {
+            background-color:#e0dcc1;
+            border:0px;
+
+        }
     </style>
 </head>
 <body>
@@ -561,15 +567,15 @@
 
                      
                         
-                         <asp:GridView ID="GridView3" CssClass="col-xs-12 col-sm-12" runat="server" AutoGenerateColumns="False" DataKeyNames="ebookID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#DEDFDE" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AllowPaging="True" PageSize="6" AllowCustomPaging="True" BorderStyle="None">
+                         <asp:GridView ID="GridView3" CssClass="col-xs-12 col-sm-12" runat="server" AutoGenerateColumns="False" DataKeyNames="ebookID" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#DEDFDE" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AllowPaging="True" PageSize="6" AllowCustomPaging="True" BorderStyle="None" OnRowCommand="GridView3_RowCommand">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:TemplateField HeaderText="热搜榜">
                     <ItemTemplate>
                         <div class="ddw">
-                        <a href="BookMessage.aspx"><asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" /></a>
+                        <a href="#"><asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/UploadPic/" +Eval("path") %>' CssClass="libpic" Height="135px" Width="203px" /></a>
+                        <asp:Button ID="Button15"  CssClass="bookna as libnametext" runat="server" Text='<%# Eval("ebookName") %>' CommandName="getID" />
                         
-                        <a href="BookMessage.aspx"><asp:Label ID="libname" runat="server" CssClass="libnametext" Text='<%# Eval("ebookName") %>'></asp:Label></a>
                             <br />
                         <asp:Label ID="libinth" runat="server" CssClass="libintext" Text='<%# Eval("author") %>'></asp:Label>
                             <br />
@@ -872,11 +878,7 @@
         
     </div>
 
-    <div class="bottomdiv">
-        <p class="bottext"><asp:Label ID="Label6" runat="server" Text="关于我们 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label3" runat="server" Text=" 联系我们 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label4" runat="server" Text=" 投稿声明 "></asp:Label>&nbsp;|&nbsp;<asp:Label ID="Label5" runat="server" Text=" 版权声明"></asp:Label></p>
-        <p class="bottext">有问题请联系客服人员。</p>
-                
-    </div>
+   
 
     </div>
     </form>

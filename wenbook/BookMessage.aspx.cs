@@ -22,64 +22,70 @@ namespace wenbook
             this.name.Text = Session["name"].ToString();
             this.inth.Text = Session["type"].ToString();
 
-            
-
-            //if (Session["user"] == null)
-            //{
-            //    this.textshuru.Visible = false;
-            //    this.Button4.Visible = false;
-            //}
-
-            //if (Session["type"].ToString() == null)
-            //{
-
-            //}
-            //else if (Session["type"].ToString() == "e")
-            //{
-            //    this.jieyue.Visible = false;
-            //    string name = Session["name"].ToString();
-            //    UpEbook lg = new UpEbook(name);
-            //    lg = bll.selectebook(lg);
-            //    if (lg.path != null)
-            //    {
-            //        this.smname.Text = lg.name.ToString();
-            //        this.name.Text = lg.name.ToString();
-            //        this.inth.Text = lg.inthro.ToString();
-            //        this.intrduce.Text = lg.intrduce.ToString();
-            //        this.smtype.Text = lg.type.ToString();
 
 
-            //        this.Image1.ImageUrl = "~/UploadPic/" + lg.path.ToString() + " ";
+            if (Session["user"] == null)
+            {
+                this.textshuru.Visible = false;
+                this.Button4.Visible = false;
+            }
 
-            //        Session["path"] = lg.path.ToString();
-            //    }
-                
-            //        this.Image1.ImageUrl = "~/image/pic1.jpg";
-                
-            //}
-            //else if (Session["type"].ToString() == "b")
-            //{
-               
-            //        string name = Session["name"].ToString();
-            //        UpBook lg = new UpBook(name);
-            //        lg = bll.selectbook(lg);
-            //        if (lg.path != null)
-            //        {
-            //        this.smname.Text = lg.name.ToString();
-            //        this.name.Text = lg.name.ToString();
-            //        this.inth.Text = lg.inthro.ToString();
-            //        this.intrduce.Text = lg.intrduce.ToString();
-            //        this.smtype.Text = lg.type.ToString();
+            if (Session["type"].ToString() == null)
+            {
 
-            //        this.Image1.ImageUrl = "~/image/" + lg.path.ToString() + " ";
-                    
+            }
+            else if (Session["type"].ToString() == "e")
+            {
+                this.jieyue.Visible = false;
+                string name = Session["name"].ToString();
+                UpEbook lg = new UpEbook(name);
+                lg = bll.selectebook(lg);
+                if (lg.path != null)
+                {
+                    this.smname.Text = lg.name.ToString();
+                    this.name.Text = lg.name.ToString();
+                    this.inth.Text = lg.inthro.ToString();
+                    this.intrduce.Text = lg.intrduce.ToString();
+                    this.smtype.Text = lg.type.ToString();
 
-            //    }
 
-                
-            //        this.Image1.ImageUrl = "~/image/pic1.jpg";
-                
-            //}
+                    this.Image1.ImageUrl = "~/UploadPic/" + lg.path.ToString() + " ";
+
+                    Session["path"] = lg.path.ToString();
+                }
+                else
+                {
+
+                    this.Image1.ImageUrl = "~/image/pic1.jpg";
+                }
+
+            }
+            else if (Session["type"].ToString() == "b")
+            {
+
+                string name = Session["name"].ToString();
+                UpBook lg = new UpBook(name);
+                lg = bll.selectbook(lg);
+                if (lg.path != null)
+                {
+                    this.smname.Text = lg.name.ToString();
+                    this.name.Text = lg.name.ToString();
+                    this.inth.Text = lg.inthro.ToString();
+                    this.intrduce.Text = lg.intrduce.ToString();
+                    this.smtype.Text = lg.type.ToString();
+
+                    this.Image1.ImageUrl = "~/image/" + lg.path.ToString() + " ";
+
+
+                }
+                else
+                {
+
+
+                    this.Image1.ImageUrl = "~/image/pic1.jpg";
+                }
+
+            }
         }
 
         protected void Button4_Click(object sender, EventArgs e)
