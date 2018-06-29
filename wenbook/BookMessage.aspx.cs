@@ -1,6 +1,7 @@
 ﻿using GTS.DBHelper;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,13 +16,23 @@ namespace wenbook
     {
         BookBll bll = new BookBll();
         commentBll bal = new commentBll();
+        SQLHelper db = new SQLHelper();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+            
 
             this.name.Text = Session["name"].ToString();
             this.inth.Text = Session["type"].ToString();
 
+
+            string cmdText = "select * from T_Comment where bookName =  @bookName";
+            string[] paramList = { "@bookName" };
+            object[] valueList = { this.name.Text };
+            DataSet da = db.FillDataSet(cmdText, paramList, valueList);
+            GridView1.DataSource = da;
+            GridView1.DataSourceID = "";
+            GridView1.DataBind();
 
 
             if (Session["user"] == null)

@@ -13,6 +13,164 @@
     <script src="js/jssor.slider-21.1.6.mini.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
+    <script language="JavaScript"> 
+function checkname(){ 
+var div = document.getElementById("div1"); 
+div.innerHTML = ""; 
+var name1 = document.form1.text1.value; 
+if (name1 == "") { 
+div.innerHTML = "姓名不能为空！"; 
+document.form1.text1.focus(); 
+return false; 
+} 
+if (name1.length < 4 || name1.length > 16) { 
+div.innerHTML = "姓名输入的长度4-16个字符！"; 
+document.form1.text1.select(); 
+return false; 
+} 
+var charname1 = name1.toLowerCase(); 
+for (var i = 0; i < name1.length; i++) { 
+var charname = charname1.charAt(i); 
+if (!(charname >= 0 && charname <= 9) && (!(charname >= 'a' && charname <= 'z')) && (charname != '_')) { 
+div.innerHTML = "姓名包含非法字母，只能包含字母，数字，和下划线"; 
+document.form1.text1.select(); 
+return false; 
+} 
+} 
+return true;
+
+}
+
+function checkpassword(){ 
+var div = document.getElementById("div2"); 
+div.innerHTML = ""; 
+var password = document.form1.text2.value; 
+if (password == "") { 
+div.innerHTML = "密码不位空！"; 
+document.form1.text2.focus(); 
+return false; 
+} 
+if (password.length < 4 || password.length > 12) { 
+div.innerHTML = "密码长度4-12位"; 
+document.form1.text2.select(); 
+return false; 
+} 
+return true; 
+}
+
+function checkrepassword(){ 
+var div = document.getElementById("div3"); 
+div.innerHTML = ""; 
+var password = document.form1.text2.value; 
+var repass = document.form1.text3.value; 
+if (repass == "") { 
+div.innerHTML = "密码不位空！"; 
+document.form1.text3.focus(); 
+return false; 
+} 
+if (password != repass) { 
+div.innerHTML = "输入密码和确认密码长度不一致"; 
+document.form1.text3.select(); 
+return false; 
+} 
+return true; 
+}
+
+function checkEmail(){ 
+var div = document.getElementById("div4"); 
+div.innerHTML = ""; 
+var email = document.form1.text5.value; 
+var sw = email.indexOf("@", 0); 
+var sw1 = email.indexOf(".", 0); 
+var tt = sw1 - sw; 
+if (email.length == 0) { 
+div.innerHTML = "电子邮件不能位空"; 
+document.form1.text5.focus(); 
+return false; 
+} 
+if (email.indexOf("@", 0) == -1) { 
+div.innerHTML = "电子邮件格式不正确，必须包含@符号！"; 
+document.form1.text5.select(); 
+return false; 
+} 
+if (email.indexOf(".", 0) == -1) { 
+div.innerHTML = "电子邮件格式不正确，必须包含.符号!"; 
+document.form1.text5.select(); 
+return false; 
+} 
+if (tt == 1) { 
+div.innerHTML = "邮件格式不对。@和.不可以挨着！"; 
+document.form1.text5.select(); 
+return false; 
+} 
+if (sw > sw1) { 
+div.innerHTML = "电子邮件格式不正确，@符号必须在.之前"; 
+document.form1.text5.select(); 
+return false; 
+} 
+else { 
+return true; 
+}
+
+return ture; 
+}
+
+function check(){ 
+if (checkname() && checkpassword() && checkrepassword() && checkEmail()) { 
+return true; 
+} 
+else { 
+return false; 
+} 
+} 
+</script>     <style>
+.chacha{
+    float: right;
+}
+#test {
+    width:100%;
+    height:100%;
+    background-color:#878282;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    opacity:0.3;
+    filter: alpha(opacity=30);
+    display:none;
+}
+
+#log_window {
+    width:400px;
+    height:400px;
+    background-color:#f0f0f0;;    
+    margin: auto;
+    position: absolute;
+    z-index:3;
+    top:300px;
+    left: 0;
+    right: 0;
+    display:none;
+}
+
+
+</style>    <script>
+function shield(){
+    var s = document.getElementById("test");
+    s.style.display = "block";
+    
+    var l = document.getElementById("log_window");
+    l.style.display = "block";
+}
+
+function cancel_shield(){
+    var s = document.getElementById("test");
+    s.style.display = "none";
+    
+    var l = document.getElementById("log_window");
+    l.style.display = "none";
+}
+</script>
     <style type="text/css">
         .ps_hear {
             font-size:18px;
@@ -90,6 +248,8 @@
     <form id="form1" runat="server">
     <div>
         
+
+
         <div class="container">
     
 
@@ -146,9 +306,33 @@
                             <li class="active"><a href="index.aspx">首页</a></li>
                             <li class=" hidden-xs"><a href="BookCity.aspx">书城</a></li>
                             <li><a href="MyLibrary.aspx">图书馆</a></li>
-                            <li class=" hidden-xs" ><a href="#">书架</a></li>
+                            <li class=" hidden-xs" ><a href="BookShelf.aspx">书架</a></li>
                             <li class=" hidden-xs" ><a href="FileUpload.aspx">信息管理</a></li>
+                            <li class=" hidden-xs" ><a href="FileUpload.aspx">个人中心</a></li>
+                            <li class=" hidden-xs" ><a href="javascript:shield()">系统日志</a></li>
                           </ul>
+<div id="test">
+
+    </div>
+
+
+                <div id="log_window">
+                     <a class="chacha" href="javascript:cancel_shield()">&Chi;</a>
+        <br/>
+        <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" Width="399px">
+            <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" CssClass="" runat="server" Text='<%# Eval("userName") %>'></asp:Label>
+                        <asp:Label ID="Label2" CssClass="" runat="server" Text='<%# Eval("logContent") %>'></asp:Label>
+                        <asp:Label ID="Label3" CssClass="txttime" runat="server" Text='<%# Eval("time") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:AqueductConnectionString %>" SelectCommand="SELECT [userName], [time], [logContent] FROM [T_LogInfo] ORDER BY [time]"></asp:SqlDataSource>
+
+                 </div>
             
                 
             </div>
