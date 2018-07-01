@@ -16,6 +16,10 @@ namespace 问渠.model
 
         public logoninfo() { }
 
+        public logoninfo(string Email) {
+            this.Email = Email;
+        }
+
 
 
         public logoninfo(string Email, string Name, string Pwd)

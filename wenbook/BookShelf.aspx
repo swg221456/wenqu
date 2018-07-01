@@ -134,7 +134,10 @@
                             <li class=" hidden-xs"><a href="BookCity.aspx">书城</a></li>
                             <li><a href="MyLibrary.aspx">图书馆</a></li>
                             <li class=" hidden-xs" ><a href="BookShelf.aspx">书架</a></li>
-                            <li class=" hidden-xs" ><a href="FileUpload.aspx">信息管理</a></li>
+                            <li class=" hidden-xs" ><a href="FileUpload.aspx">信息上传</a></li>
+                       <li class=" hidden-xs" runat="server" id="userli"><a href="profile.aspx">
+                                    <asp:Label CssClass="text-right span1" ID="user" runat="server" Text=""></asp:Label></a></li>
+                               
                           </ul>
             
                 
@@ -233,7 +236,7 @@
             
             <div class="bigdiv col-sx-12 col-sm-12 col-md-9 col-lg-8">
                
-                 <asp:GridView ID="GridView1" CssClass="grid1" runat="server" AutoGenerateColumns="False" BorderStyle="None" DataKeyNames="bookID" DataSourceID="SqlDataSource1" Width="48%" AllowPaging="True" PageSize="7" OnRowCommand="GridView1_RowCommand">
+                 <asp:GridView ID="GridView1" CssClass="grid1" runat="server" AutoGenerateColumns="False" BorderStyle="None"  DataSourceID="SqlDataSource1" Width="48%" AllowPaging="True" PageSize="7" OnRowCommand="GridView1_RowCommand">
             <Columns>
                 <asp:TemplateField HeaderText="图书">
                     <ItemTemplate>
@@ -256,7 +259,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AqueductConnectionString %>" SelectCommand="SELECT [bookName], [author], [type], [introduce], [path] FROM [ViewBook]"></asp:SqlDataSource>
 
-         <asp:GridView ID="GridView2" CssClass="grid1" runat="server" AutoGenerateColumns="False" BorderStyle="None" DataKeyNames="bookID" DataSourceID="SqlDataSource2" Width="48%" AllowPaging="True" PageSize="7" OnRowCommand="GridView1_RowCommand">
+         <asp:GridView ID="GridView2" CssClass="grid1" runat="server" AutoGenerateColumns="False" BorderStyle="None"  DataSourceID="SqlDataSource2" Width="48%" AllowPaging="True" PageSize="7" OnRowCommand="GridView1_RowCommand">
             <Columns>
                 <asp:TemplateField HeaderText="电子书">
                     <ItemTemplate>
@@ -268,7 +271,7 @@
                         <asp:Label ID="Label3" runat="server" CssClass="bookty" Text='<%# Eval("type") %>'></asp:Label>
                         <asp:Label ID="Label4" runat="server" CssClass="booktro" Text='<%# Eval("introduce") %>'></asp:Label>
                             <br />
-                        <asp:Button ID="Button1" runat="server"  CommandArgument='<%# Eval("bookName") %>' CommandName="setID" CssClass=" as" Text="删除" />
+                        <asp:Button ID="Button1" runat="server"  CommandArgument='<%# Eval("ebookName") %>' CommandName="setID" CssClass=" as" Text="删除" />
                         </div>
                     </ItemTemplate>
                     <HeaderStyle BorderStyle="None" BackColor="#CCCCCC" Font-Bold="True" Font-Italic="True" Font-Size="X-Large" HorizontalAlign="Center" />

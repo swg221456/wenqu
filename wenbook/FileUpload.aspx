@@ -148,7 +148,10 @@
                             <li class=" hidden-xs"><a href="BookCity.aspx">书城</a></li>
                             <li><a href="MyLibrary.aspx">图书馆</a></li>
                             <li class=" hidden-xs" ><a href="BookShelf.aspx">书架</a></li>
-                            <li class=" hidden-xs" ><a href="FileUpload.aspx">信息管理</a></li>
+                            <li class=" hidden-xs" ><a href="FileUpload.aspx">信息上传</a></li>
+                      <li class=" hidden-xs" runat="server" id="userli"><a href="profile.aspx">
+                                    <asp:Label CssClass="text-right span1" ID="user" runat="server" Text=""></asp:Label></a></li>
+          
                           </ul>
             
                 

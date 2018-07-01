@@ -16,7 +16,7 @@ namespace 问渠.DAL
 
         public int Add(logoninfo user)
         {
-            string cmdText = "insert into UserInfo(userName,password,sex,email) values(@userName,@password,@sex,@email)";
+            string cmdText = "insert into T_UserInfo(userName,password,sex,email) values(@userName,@password,@sex,@email)";
             string[] paramList = { "@email", "@userName", "@password" ,"@sex"};
             object[] valueList = { user.Email, user.Name, user.Pwd,user.sex};
             return db.ExecuteNoneQuery(cmdText, paramList, valueList);
@@ -24,7 +24,7 @@ namespace 问渠.DAL
 
         public int Delete(string Email)
         {
-            string cmdText = "delete from UserInfo where userName=@userName";
+            string cmdText = "delete from T_UserInfo where userName=@userName";
             string[] paramList = { "@userName" };
             object[] valueList = { Email };
             return db.ExecuteNoneQuery(cmdText, paramList, valueList);
@@ -32,7 +32,7 @@ namespace 问渠.DAL
 
         public int Update(logoninfo user)
         {
-            string cmdText = "update UserInfo set pwd=@pwd,realName=@realName where userName=@userName";
+            string cmdText = "update T_UserInfo set pwd=@pwd,realName=@realName where userName=@userName";
             string[] paramList = { "@email", "@password", "@userName" };
             object[] valuesList = { user.Email, user.Pwd, user.Name };
             return db.ExecuteNoneQuery(cmdText, paramList, valuesList);
@@ -40,7 +40,7 @@ namespace 问渠.DAL
 
         public logoninfo Query(string Email)
         {
-            string cmdText = "select * from UserInfo where email = @email";
+            string cmdText = "select * from T_UserInfo where email = @email";
             string[] paramList = { "@email" };
             object[] valueList = { Email };
             SqlDataReader reader = db.ExecuteReader(cmdText, paramList, valueList);
@@ -62,14 +62,14 @@ namespace 问渠.DAL
             DataSet ds = new DataSet();
             if (isAccurate)
             {
-                string cmdText = "select * from UserInfo where email = @email";
+                string cmdText = "select * from T_UserInfo where email = @email";
                 string[] paramList = { "@email" };
                 object[] valueList = { Email };
                 ds = db.FillDataSet(cmdText, paramList, valueList);
             }
             else
             {
-                string cmdText = "select * from UserInfo where email like @email";
+                string cmdText = "select * from T_UserInfo where email like @email";
                 string[] paramList = { "@email" };
                 object[] valueList = { "%" + Email + "%" };
                 ds = db.FillDataSet(cmdText, paramList, valueList);

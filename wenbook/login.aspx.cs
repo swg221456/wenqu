@@ -9,6 +9,9 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Bll;
+using wenbook.model;
+using wenbook.Bll;
+using 问渠.Bll;
 
 namespace wenbook
 {
@@ -25,6 +28,8 @@ namespace wenbook
         {
 
         }
+
+
         protected void login_ServerClick(object sender, EventArgs e)
         {
             string emaile = this.Emaile.Value.ToString();
@@ -55,7 +60,15 @@ namespace wenbook
                     if (emaile == Session["Emaile"].ToString())
                     {
                         Session["user"] = Session["Emaile"];
+
+                        string user = Session["user"].ToString();
+                        string text = user.ToString() + "用户登录：" + user;
+                        daysInfo da = new daysInfo(user, DateTime.Now.ToLocalTime().ToString(), text);
+                        commentBll bal = new commentBll();
+                        OperationResult ob = bal.Registday(da);
+
                         Response.Redirect("index.aspx", false);
+
                     }
 
                 }
