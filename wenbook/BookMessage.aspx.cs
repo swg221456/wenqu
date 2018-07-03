@@ -254,5 +254,10 @@ namespace wenbook
                 }
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Eext/"+ Session["name"].ToString() + ".txt");
+        }
     }
 }

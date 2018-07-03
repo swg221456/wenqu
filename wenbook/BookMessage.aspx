@@ -144,7 +144,7 @@
                     <p class="intext"><asp:Label ID="inth" runat="server" Text="异常"></asp:Label></p>
                     <p class="cctext"><asp:Label ID="intrduce" runat="server" Text="异常"></asp:Label></p>
 
-                    <asp:Button ID="Button1" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="开始阅读" />
+                    <asp:Button ID="Button1" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="开始阅读" OnClick="Button1_Click" />
 
                     <asp:Button ID="Button2" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="目录" />
 

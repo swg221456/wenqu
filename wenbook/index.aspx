@@ -325,7 +325,7 @@
                             <div id="log_window">
                                 <a class="chacha" href="javascript:cancel_shield()">&Chi;</a>
                                 <br />
-                                <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" Width="399px">
+                                <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" Width="399px" AllowCustomPaging="True">
                                     <Columns>
                                         <asp:TemplateField>
                                             <ItemTemplate>
