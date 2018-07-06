@@ -338,6 +338,7 @@
     <Content Include="js\index.js" />
     <Content Include="js\jquery-2.2.3.min.js" />
     <Content Include="js\jquery.js" />
+    <Content Include="profile.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="UploadPic\asd2.jpg" />
@@ -398,6 +399,7 @@
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -416,6 +418,13 @@
     </Compile>
     <Compile Include="MyLibrary.aspx.designer.cs">
       <DependentUpon>MyLibrary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
