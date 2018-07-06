@@ -118,7 +118,11 @@
                             <li class=" hidden-xs"><a href="BookCity.aspx">书城</a></li>
                             <li><a href="MyLibrary.aspx">图书馆</a></li>
                             <li class=" hidden-xs" ><a href="BookShelf.aspx">书架</a></li>
-                            <li class=" hidden-xs" ><a href="FileUpload.aspx">信息管理</a></li>
+                            <li class=" hidden-xs" ><a href="FileUpload.aspx">信息上传</a></li>
+  <li class=" hidden-xs" runat="server" id="userli"><a href="profile.aspx">
+                                    <asp:Label CssClass="text-right span1" ID="user" runat="server" Text=""></asp:Label></a></li>
+                                <li class=" hidden-xs" runat="server" id="loginli"><a href="login.aspx">
+                                    <asp:Label CssClass="text-right span1" ID="login" runat="server" Text="登录"></asp:Label></a></li>
                           </ul>
             
                 
@@ -140,7 +144,7 @@
                     <p class="intext"><asp:Label ID="inth" runat="server" Text="异常"></asp:Label></p>
                     <p class="cctext"><asp:Label ID="intrduce" runat="server" Text="异常"></asp:Label></p>
 
-                    <asp:Button ID="Button1" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="开始阅读" />
+                    <asp:Button ID="Button1" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="开始阅读" OnClick="Button1_Click" />
 
                     <asp:Button ID="Button2" CssClass="btn btn-large btn-danger btnlogon" runat="server" Text="目录" />
 

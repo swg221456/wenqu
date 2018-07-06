@@ -66,6 +66,26 @@ namespace 问渠.Bll
            }
         }
 
+
+        /// <summary>
+        /// 根据Email查修
+        /// </summary>
+        /// <returns></returns>
+
+        public logoninfo selectname(logoninfo user)
+        {
+            logoninfo tep = dao.Query(user.Email);
+            if (tep != null)
+            {
+                return tep;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
         /// <summary>
         /// 检索所有用户信息
         /// </summary>

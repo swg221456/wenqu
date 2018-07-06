@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using wenbook.Bll;
 using wenbook.model;
 using 问渠.Bll;
+using 问渠.model;
 
 namespace wenbook
 {
@@ -17,10 +18,23 @@ namespace wenbook
         BookBll bll = new BookBll();
         commentBll bal = new commentBll();
         SQLHelper db = new SQLHelper();
+        logonBll ball = new logonBll();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            
+            if (Session["user"] != null)
+            {
+                logoninfo lg = new logoninfo(Session["user"].ToString());
+                lg = ball.selectname(lg);
+                this.user.Text = lg.Name;
+                this.loginli.Style["display"] = "none";
+            }
+            else
+            {
+                this.userli.Style["display"] = "none";
+                this.textshuru.Visible = false;
+                this.Button4.Visible = false;
+            }
+
 
             this.name.Text = Session["name"].ToString();
             this.inth.Text = Session["type"].ToString();
@@ -35,11 +49,7 @@ namespace wenbook
             GridView1.DataBind();
 
 
-            if (Session["user"] == null)
-            {
-                this.textshuru.Visible = false;
-                this.Button4.Visible = false;
-            }
+          
 
             if (Session["type"].ToString() == null)
             {
@@ -243,6 +253,11 @@ namespace wenbook
 
                 }
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Eext/"+ Session["name"].ToString() + ".txt");
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using wenbook.Bll;
 using wenbook.model;
 using 问渠.Bll;
+using 问渠.model;
 
 namespace wenbook
 {
@@ -14,12 +15,23 @@ namespace wenbook
     {
 
         FileUploadBll bll = new FileUploadBll();
+        logonBll bal = new logonBll();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (this.Session["user"] == null)
+            if (Session["user"] != null)
+            {
+                logoninfo lg = new logoninfo(Session["user"].ToString());
+                lg = bal.selectname(lg);
+
+                this.user.Text = lg.Name;
+
+            }
+            else
             {
                 Response.Redirect("Login.aspx");
             }
+
+           
             string[] List = { "都市传奇", "玄幻", "仙侠修真", "灵异", "历史", "游戏竞技", "科幻", "武侠", "奇幻", "古代言情", "现代言情", "玄幻言情", "校园生活", "其他" };
             for (int i = 1; i <List.Length; i++)
             {
